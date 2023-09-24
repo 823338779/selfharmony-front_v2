@@ -19,12 +19,7 @@ export default function CommonLayout({children, selectedKey}: { children: React.
                         })}
                 />
             </Header>
-            <Content style={{ padding: '0 50px' }}>
-                {/*<Breadcrumb style={{ margin: '16px 0' }}>*/}
-                {/*    <Breadcrumb.Item>Home</Breadcrumb.Item>*/}
-                {/*    <Breadcrumb.Item>List</Breadcrumb.Item>*/}
-                {/*    <Breadcrumb.Item>App</Breadcrumb.Item>*/}
-                {/*</Breadcrumb>*/}
+            <Content style={{ padding: '0 10px' }}>
                 <div className="site-layout-content" style={{maxWidth:1000, margin:"0 auto"}}>
                     {children}
                 </div>
