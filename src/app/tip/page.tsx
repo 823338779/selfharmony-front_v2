@@ -199,8 +199,8 @@ function getStatusColor(status: number) {
 function TipTable({tipList, callBack}: { tipList: TipStruct[], callBack: PageCallBack }) {
     return (
         <Table dataSource={tipList} pagination={false} rowKey={"id"}>
-            <Column width={"10%"} title="Id" align={"center"} dataIndex={"id"}/>
-            <Column width={"10%"} title="Content" dataIndex={"content"}
+            <Column title="Id" align={"center"} dataIndex={"id"}/>
+            <Column title="Content" dataIndex={"content"}
                     render={(_: any, record: TipStruct) => {
                         return (
                             <div style={{display: "flex", alignItems: "center", justifyContent: "start"}}>
@@ -210,8 +210,8 @@ function TipTable({tipList, callBack}: { tipList: TipStruct[], callBack: PageCal
                             </div>
                         )
                     }}/>
-            <Column width={"10%"} title="Author" align={"center"} dataIndex={"author"}/>
-            <Column width={"10%"}
+            <Column title="Author" align={"center"} dataIndex={"author"}/>
+            <Column
                     title="Action"
                     key="action"
                     align={"center"}
