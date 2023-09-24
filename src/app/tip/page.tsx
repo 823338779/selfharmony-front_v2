@@ -1,13 +1,9 @@
 'use client';
 import CommonLayout from "@/components/common_layout/common_layout";
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {Button, Space, Table, notification} from "antd";
 import axios from "axios";
-
-type NotificationType = 'success' | 'info' | 'warning' | 'error';
-import {undefined} from "zod";
 import {Column, ColumnGroup} from "rc-table";
-import {list} from "postcss";
 import {custom_env} from "@/app/consts";
 import {stringify} from "yaml";
 const HOST = custom_env.DEBUG_HOST
