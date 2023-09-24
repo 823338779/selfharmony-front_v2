@@ -3,11 +3,11 @@ import CommonLayout from "@/components/common_layout/common_layout";
 import React, {useState} from "react";
 import {Button, Space, Table, notification, Input, Form, Modal} from "antd";
 import axios from "axios";
-import {Column, ColumnGroup} from "rc-table";
+import {Column} from "rc-table";
 import {custom_env} from "@/app/consts";
 import {stringify} from "yaml";
 import Search from "antd/es/input/Search";
-import {LogoutOutlined, PlusCircleOutlined} from "@ant-design/icons";
+import {PlusCircleOutlined} from "@ant-design/icons";
 
 const HOST = custom_env.DEBUG_HOST
 
