@@ -1,15 +1,20 @@
 "use client";
 import Image from 'next/image'
-import React from "react";
+import React, {useEffect} from "react";
 import CommonLayout from "@/components/common_layout/common_layout";
-// export const DEBUG_HOST = "http://192.168.31.92:8080/"
+import {useRouter} from "next/navigation";
 
 export default function Home() {
 
+    const router = useRouter()
+
+    useEffect(()=>{
+        router.push("/tip")
+    })
     return (
         <main>
             <CommonLayout selectedKey={"1"}>
-                aaaa
+
             </CommonLayout>
         </main>
     )

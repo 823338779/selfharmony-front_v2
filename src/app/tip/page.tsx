@@ -9,7 +9,7 @@ import {stringify} from "yaml";
 import Search from "antd/es/input/Search";
 import {PlusCircleOutlined} from "@ant-design/icons";
 
-const HOST = custom_env.DEBUG_HOST
+const HOST = custom_env.ONLINE_HOST
 
 const getTipList = (content: string = "") => {
     // let input = document.getElementById("filter_input").value
@@ -137,7 +137,7 @@ function TipInsert({callBack}: { callBack: (a: any) => void }) {
                 form
                     .validateFields()
                     .then((values: { content: string, author: string }) => {
-                        if (values.content?.length > 0 || values.author?.length > 0) {
+                        if (values.content?.length > 0 && values.author?.length > 0) {
                             postInsert(values.content, values.author)
                             form.resetFields();
                         }
