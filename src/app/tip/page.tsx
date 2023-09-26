@@ -8,6 +8,7 @@ import {custom_env} from "@/app/consts";
 import {stringify} from "yaml";
 import Search from "antd/es/input/Search";
 import {PlusCircleOutlined} from "@ant-design/icons";
+import Head from "next/head";
 
 const HOST = custom_env.ONLINE_HOST
 
@@ -83,7 +84,6 @@ export default class TipManager extends React.Component<any, State> {
     searchContent = (content: string, _: any) => {
         this.refreshList(content)
     }
-
     render() {
         return (
             <div>
