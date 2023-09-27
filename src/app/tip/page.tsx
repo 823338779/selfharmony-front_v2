@@ -86,16 +86,14 @@ export default class TipManager extends React.Component<any, State> {
     }
     render() {
         return (
-            <div>
-                <CommonLayout selectedKey={"1"}>
-                    <div
-                        style={{width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between"}}>
-                        <TipSearchBar searchContent={this.searchContent}/>
-                        <TipInsert callBack={this.refreshList}/>
-                    </div>
-                    <TipTable tipList={this.state.tipList} callBack={{updateStatus: this.changeTipStatus}}/>
-                </CommonLayout>
-            </div>
+            <CommonLayout selectedKey={"1"}>
+                <div
+                    style={{width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between"}}>
+                    <TipSearchBar searchContent={this.searchContent}/>
+                    <TipInsert callBack={this.refreshList}/>
+                </div>
+                <TipTable tipList={this.state.tipList} callBack={{updateStatus: this.changeTipStatus}}/>
+            </CommonLayout>
         )
     }
 }
@@ -205,31 +203,37 @@ function TipTable({tipList, callBack}: { tipList: TipStruct[], callBack: PageCal
                         return (
                             <div style={{display: "flex", alignItems: "center", justifyContent: "start"}}>
                                 <div
-                                    style={{marginRight: "3px", width: "10px", height: "10px", borderRadius: "5px", backgroundColor: getStatusColor(record.status)}}></div>
+                                    style={{
+                                        marginRight: "3px",
+                                        width: "10px",
+                                        height: "10px",
+                                        borderRadius: "5px",
+                                        backgroundColor: getStatusColor(record.status)
+                                    }}></div>
                                 {record.content}
                             </div>
                         )
                     }}/>
             <Column title="Author" align={"center"} dataIndex={"author"}/>
             <Column
-                    title="Action"
-                    key="action"
-                    align={"center"}
-                    render={(_: any, record: TipStruct) => (
-                        <Space size="middle" direction="vertical">
-                            {(record.status != 2) ? <Button
-                                style={{color: "#ffffff", backgroundColor: getStatusColor(2), padding: "5px"}}
-                                onClick={() => {
-                                    callBack.updateStatus(record.id, 2)
-                                }}>Reject</Button> : null}
-                            {(record.status != 1) ? <Button
-                                style={{color: "#ffffff", backgroundColor: getStatusColor(1), padding: "5px"}}
-                                onClick={() => {
-                                    callBack.updateStatus(record.id, 1)
-                                }}
-                            >Approve</Button> : null}
-                        </Space>
-                    )}
+                title="Action"
+                key="action"
+                align={"center"}
+                render={(_: any, record: TipStruct) => (
+                    <Space size="middle" direction="vertical">
+                        {(record.status != 2) ? <Button
+                            style={{color: "#ffffff", backgroundColor: getStatusColor(2), padding: "5px"}}
+                            onClick={() => {
+                                callBack.updateStatus(record.id, 2)
+                            }}>Reject</Button> : null}
+                        {(record.status != 1) ? <Button
+                            style={{color: "#ffffff", backgroundColor: getStatusColor(1), padding: "5px"}}
+                            onClick={() => {
+                                callBack.updateStatus(record.id, 1)
+                            }}
+                        >Approve</Button> : null}
+                    </Space>
+                )}
             />
         </Table>
     )
