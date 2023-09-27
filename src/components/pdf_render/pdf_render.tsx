@@ -6,8 +6,10 @@ export default function PdfRender({url}: { url: string }) {
 
     return (
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-            <Viewer defaultScale={SpecialZoomLevel.PageWidth} fileUrl={url} scrollMode={ScrollMode.Page}
-                    viewMode={ViewMode.SinglePage}/>
+            <Viewer defaultScale={SpecialZoomLevel.PageWidth} fileUrl={url}
+                    // scrollMode={ScrollMode.Page}
+                    // viewMode={ViewMode.SinglePage}
+            />
         </Worker>
     )
 }

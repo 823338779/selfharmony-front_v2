@@ -1,30 +1,55 @@
 import React from "react";
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
-const { Header, Content, Footer } = Layout;
+import {Breadcrumb, Layout, Menu, MenuProps, theme} from 'antd';
+import {MenuInfo} from "rc-menu/lib/interface";
+import {useRouter} from "next/navigation";
 
-export default function CommonLayout({children, selectedKey}: { children: React.ReactNode, selectedKey: string }){
+const {Header, Content, Footer} = Layout;
 
+export default function CommonLayout({children, selectedKey}: { children: React.ReactNode, selectedKey: string }) {
+
+    const router = useRouter()
+    const onClick: MenuProps['onClick'] = (e) => {
+        console.log('click ', e);
+    };
+    const urls: { 1: string, 3: string } = {
+        "1": "tip",
+        "3": "book",
+    }
     return (
-        <Layout style={{height:"100%"}} className="layout">
-            <Header style={{ alignItems: 'center', width:"100%"}}>
-                <div className="demo-logo" />
+        <Layout style={{minHeight:"100%"}} className="layout">
+            <Header style={{alignItems: 'center', width: "100%"}}>
+                <div className="demo-logo"/>
                 <Menu
                     theme="dark"
                     mode="horizontal"
                     defaultSelectedKeys={[selectedKey]}
                     items={
-                        ["Tip Page", "Log Page", "Book Page"].map((o, index) => {
+                        [{name: "Tip Page", url: "tip"}, {name: "Log Page", url: "log"}, {
+                            name: "Book Page",
+                            url: "book"
+                        }].map((o, index) => {
                             const key = index + 1;
-                            return {key, label: o,};
+                            return {key, label: o.name,};
                         })}
+                    onClick={(o) => {
+                        let path = ""
+                        if (o.key == "1") {
+                            path = "tip"
+                        } else if (o.key == "3") {
+                            path = "book"
+                        }
+                        if (path.length > 0) {
+                            router.push("/" + path)
+                        }
+                    }}
                 />
             </Header>
-            <Content style={{ padding: '0 10px' }}>
-                <div className="site-layout-content" style={{maxWidth:1000, margin:"0 auto"}}>
+            <Content style={{padding: '0 10px'}}>
+                <div className="site-layout-content" style={{maxWidth: 1000, margin: "0 auto"}}>
                     {children}
                 </div>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
+            <Footer style={{textAlign: 'center'}}>Ant Design ©2023 Created by Ant UED</Footer>
         </Layout>
     )
 }
