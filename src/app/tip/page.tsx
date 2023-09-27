@@ -4,13 +4,12 @@ import React, {useState} from "react";
 import {Button, Space, Table, notification, Input, Form, Modal} from "antd";
 import axios from "axios";
 import {Column} from "rc-table";
-import {custom_env} from "@/app/consts";
+import {custom_env, HOST} from "@/app/consts";
 import {stringify} from "yaml";
 import Search from "antd/es/input/Search";
 import {PlusCircleOutlined} from "@ant-design/icons";
 import Head from "next/head";
 
-const HOST = custom_env.ONLINE_HOST
 
 const getTipList = (content: string = "") => {
     // let input = document.getElementById("filter_input").value

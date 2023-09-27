@@ -5,7 +5,7 @@ const { Header, Content, Footer } = Layout;
 export default function CommonLayout({children, selectedKey}: { children: React.ReactNode, selectedKey: string }){
 
     return (
-        <Layout className="layout">
+        <Layout style={{height:"100%"}} className="layout">
             <Header style={{ alignItems: 'center', width:"100%"}}>
                 <div className="demo-logo" />
                 <Menu
