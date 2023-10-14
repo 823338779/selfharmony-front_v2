@@ -11,12 +11,12 @@ export default function Home() {
 
     const router = useRouter()
 
-    // useEffect(()=>{
-    //     router.push("tip")
-    // })
+    useEffect(()=>{
+        router.push("tip")
+    })
     return (
         <main>
-            <Sample/>
+            {/*<Sample/>*/}
         </main>
     )
 }

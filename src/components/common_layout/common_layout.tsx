@@ -16,7 +16,7 @@ export default function CommonLayout({children, selectedKey}: { children: React.
         "3": "book",
     }
     return (
-        <Layout style={{minHeight:"100%"}} className="layout">
+        <Layout style={{minHeight: "100%"}} className="layout">
             <Header style={{alignItems: 'center', width: "100%"}}>
                 <div className="demo-logo"/>
                 <Menu
@@ -24,10 +24,11 @@ export default function CommonLayout({children, selectedKey}: { children: React.
                     mode="horizontal"
                     defaultSelectedKeys={[selectedKey]}
                     items={
-                        [{name: "Tip Page", url: "tip"}, {name: "Log Page", url: "log"}, {
-                            name: "Book Page",
-                            url: "book"
-                        }].map((o, index) => {
+                        [{name: "Tip Page", url: "tip"},
+                            {name: "Log Page", url: "log"},
+                            {name: "Book Page", url: "book"},
+                            {name: "KV Page", url: "fast_kv"}
+                        ].map((o, index) => {
                             const key = index + 1;
                             return {key, label: o.name,};
                         })}
@@ -37,6 +38,8 @@ export default function CommonLayout({children, selectedKey}: { children: React.
                             path = "tip"
                         } else if (o.key == "3") {
                             path = "book"
+                        } else if (o.key == "4") {
+                            path = "fast_kv"
                         }
                         if (path.length > 0) {
                             router.push("/" + path)

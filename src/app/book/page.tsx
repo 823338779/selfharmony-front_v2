@@ -16,7 +16,7 @@ interface BookItem {
     path: string
 }
 
-const getTipList = () => {
+const getBookList = () => {
     return axios.get(HOST + 'books/book_list')
 }
 export default function BookList() {
@@ -24,7 +24,7 @@ export default function BookList() {
     const router = useRouter()
     useEffect(() => {
         if (bookList.length <= 0) {
-            getTipList().then((resp) => {
+            getBookList().then((resp) => {
                 setBookList(resp.data)
             })
         }
