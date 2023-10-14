@@ -4,10 +4,8 @@
 import {Button, Card, Form, Input, List, notification} from "antd";
 import React, {useEffect, useRef, useState} from "react";
 import CommonLayout from "@/components/common_layout/common_layout";
-import {useRouter} from "next/navigation";
 import axios from "axios";
 import {HOST} from "@/app/consts";
-import {PlusCircleOutlined} from "@ant-design/icons";
 import TextArea, {TextAreaRef} from "antd/lib/input/TextArea";
 import {stringify} from "yaml";
 
@@ -40,11 +38,10 @@ const openNotificationWithIcon = (msg: any) => {
     });
 };
 export default function fastKvPage() {
-
-    const [itemList, setItemList] = useState<VKItem[]>([])
+    const [itemList, setItemList] = useState<VKItem[] | undefined>(undefined)
 
     useEffect(() => {
-        if (itemList.length <= 0) {
+        if (!itemList) {
             refreshData()
         }
     })
@@ -89,7 +86,7 @@ export default function fastKvPage() {
                 dataSource={itemList}
                 renderItem={(item: VKItem) => (
                     <List.Item>
-                        <Card title={item.name}>名字：{item.name} <Button type="link" danger onClick={()=>{
+                        <Card title={item.name}>名字：{item.name} <Button type="link" danger onClick={() => {
                             doDelete(item.id)
                         }}>
                             删除
