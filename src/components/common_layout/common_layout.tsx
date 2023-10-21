@@ -41,8 +41,10 @@ export default function CommonLayout({children, selectedKey}: { children: React.
                         } else if (o.key == "4") {
                             path = "fast_kv"
                         }
+                        const searchParams = new URLSearchParams(window.location.search);
+                        const id = searchParams.get('id');
                         if (path.length > 0) {
-                            router.push("/" + path)
+                            router.push("/" + path + "?id=" + id)
                         }
                     }}
                 />

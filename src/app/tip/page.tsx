@@ -4,7 +4,7 @@ import React, {useState} from "react";
 import {Button, Space, Table, notification, Input, Form, Modal} from "antd";
 import axios from "axios";
 import {Column} from "rc-table";
-import {custom_env, HOST} from "@/app/consts";
+import {checkInvalid, custom_env, HOST} from "@/app/consts";
 import {stringify} from "yaml";
 import Search from "antd/es/input/Search";
 import {PlusCircleOutlined} from "@ant-design/icons";
@@ -61,7 +61,9 @@ export default class TipManager extends React.Component<any, State> {
     }
 
     componentDidMount() {
-        this.refreshList()
+        if (checkInvalid()) {
+            this.refreshList()
+        }
     }
 
     refreshList = (searchContent: string = "") => {
@@ -83,8 +85,10 @@ export default class TipManager extends React.Component<any, State> {
     searchContent = (content: string, _: any) => {
         this.refreshList(content)
     }
+
     render() {
         return (
+            checkInvalid()?
             <CommonLayout selectedKey={"1"}>
                 <div
                     style={{width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between"}}>
@@ -92,7 +96,7 @@ export default class TipManager extends React.Component<any, State> {
                     <TipInsert callBack={this.refreshList}/>
                 </div>
                 <TipTable tipList={this.state.tipList} callBack={{updateStatus: this.changeTipStatus}}/>
-            </CommonLayout>
+            </CommonLayout> :<></>
         )
     }
 }

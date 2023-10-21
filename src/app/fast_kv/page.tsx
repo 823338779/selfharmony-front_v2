@@ -5,7 +5,7 @@ import {Button, Card, Form, Input, List, notification} from "antd";
 import React, {useEffect, useRef, useState} from "react";
 import CommonLayout from "@/components/common_layout/common_layout";
 import axios from "axios";
-import {HOST} from "@/app/consts";
+import {checkInvalid, HOST} from "@/app/consts";
 import TextArea, {TextAreaRef} from "antd/lib/input/TextArea";
 import {stringify} from "yaml";
 
@@ -41,6 +41,9 @@ export default function fastKvPage() {
     const [itemList, setItemList] = useState<VKItem[] | undefined>(undefined)
 
     useEffect(() => {
+        if (!checkInvalid()) {
+            return
+        }
         if (!itemList) {
             refreshData()
         }
@@ -69,6 +72,8 @@ export default function fastKvPage() {
     const inputKeyRef = useRef<TextAreaRef>(null)
     const inputValueRef = useRef<TextAreaRef>(null)
     return (
+
+        checkInvalid() ?
         <CommonLayout selectedKey={"4"}>
             <div>
                 <TextArea ref={inputKeyRef} rows={1} placeholder={"KEY"}/>
@@ -94,6 +99,6 @@ export default function fastKvPage() {
                     </List.Item>
                 )}
             />
-        </CommonLayout>
+        </CommonLayout>:<></>
     )
 }

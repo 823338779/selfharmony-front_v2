@@ -1,7 +1,7 @@
 'use client';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import PdfRender from "@/components/pdf_render/pdf_render";
-import {HOST} from "@/app/consts";
+import {checkInvalid, HOST} from "@/app/consts";
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {Card, List} from 'antd';
@@ -19,10 +19,14 @@ interface BookItem {
 const getBookList = () => {
     return axios.get(HOST + 'books/book_list')
 }
+
 export default function BookList() {
     const [bookList, setBookList] = useState<BookItem[]>([])
     const router = useRouter()
     useEffect(() => {
+        if (!checkInvalid()) {
+            return
+        }
         if (bookList.length <= 0) {
             getBookList().then((resp) => {
                 setBookList(resp.data)
@@ -30,19 +34,19 @@ export default function BookList() {
         }
     })
     return (
-        <CommonLayout selectedKey={"3"}>
-            <List
-                grid={{gutter: 16, column: 1}}
-                dataSource={bookList}
-                renderItem={(item: BookItem) => (
-                    <List.Item>
-                        <Card title={item.book_name} onClick={() => {
-                            router.push("/book/read?name=" + item.path + "&page=" + item.page + "&id=" + item.id)
-                        }}>{item.book_name}；已读；{item.page}</Card>
-                    </List.Item>
-                )}
-            />
-        </CommonLayout>
-
+        checkInvalid() ?
+            <CommonLayout selectedKey={"3"}>
+                <List
+                    grid={{gutter: 16, column: 1}}
+                    dataSource={bookList}
+                    renderItem={(item: BookItem) => (
+                        <List.Item>
+                            <Card title={item.book_name} onClick={() => {
+                                router.push("/book/read?name=" + item.path + "&page=" + item.page + "&id=" + item.id)
+                            }}>{item.book_name}；已读；{item.page}</Card>
+                        </List.Item>
+                    )}
+                />
+            </CommonLayout> : <></>
     );
 }
