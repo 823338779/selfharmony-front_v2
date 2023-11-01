@@ -22,12 +22,12 @@ export default function Home() {
                             axios.get(HOST + "login?passport=" + passport.current?.input?.value).then((resp) => {
                                 let token = resp.data.data.token
                                 let ok = resp.data.msg
+                                localStorage.setItem("jwt", token)
                                 if (ok) {
                                     router.push("tip")
-                                    localStorage.setItem("jwt", token)
                                 } else {
                                     openNotificationWithIcon("权限不足")
-                                    localStorage.removeItem("jwt")
+                                    // localStorage.removeItem("jwt")
                                 }
                             })
                         }

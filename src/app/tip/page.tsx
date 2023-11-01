@@ -203,6 +203,7 @@ function TipTable({tipList, callBack}: { tipList: TipStruct[], callBack: PageCal
                             <div style={{display: "flex", alignItems: "center", justifyContent: "start"}}>
                                 <div
                                     style={{
+                                        flexShrink: 0,
                                         marginRight: "3px",
                                         width: "10px",
                                         height: "10px",
