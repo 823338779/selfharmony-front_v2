@@ -9,7 +9,7 @@ export const custom_env = {
     ONLINE_LOCAL_HOST: "http://192.168.31.216:8080/"
 }
 // export const HOST = custom_env.DEBUG_HOST
-export const HOST = custom_env.ONLINE_HOST
+export const HOST = custom_env.DEBUG_HOST
 export const openNotificationWithIcon = (msg: any) => {
     notification.open({
         message: stringify(msg),

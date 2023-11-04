@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     distDir: 'build',
-    output: "export",
+    // output: "export",
     reactStrictMode: true,
     experimental: {
         appDir: true,
     },
-    webpack: (config, { webpack }) => {
+    webpack: (config, {webpack}) => {
         config.experiments = {
             ...config.experiments,
             topLevelAwait: true,
@@ -23,6 +23,14 @@ const nextConfig = {
         )
         return config
     },
+    async rewrites() {
+        return [
+            {
+                source: '/api/:slug*',
+                destination: `http://localhost:8080/:slug*`,
+            },
+        ]
+    }
 }
 
 module.exports = nextConfig
