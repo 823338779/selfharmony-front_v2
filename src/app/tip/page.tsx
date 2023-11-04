@@ -4,7 +4,7 @@ import React, {useState} from "react";
 import {Button, Space, Table, notification, Input, Form, Modal} from "antd";
 import axios from "axios";
 import {Column} from "rc-table";
-import {custom_env, HOST} from "@/app/consts";
+import {HOST} from "@/app/consts";
 import {stringify} from "yaml";
 import Search from "antd/es/input/Search";
 import {PlusCircleOutlined} from "@ant-design/icons";

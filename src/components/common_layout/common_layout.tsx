@@ -6,15 +6,8 @@ import {useRouter} from "next/navigation";
 const {Header, Content, Footer} = Layout;
 
 export default function CommonLayout({children, selectedKey}: { children: React.ReactNode, selectedKey: string }) {
-
     const router = useRouter()
-    const onClick: MenuProps['onClick'] = (e) => {
-        console.log('click ', e);
-    };
-    const urls: { 1: string, 3: string } = {
-        "1": "tip",
-        "3": "book",
-    }
+
     return (
         <Layout style={{minHeight: "100%"}} className="layout">
             <Header style={{alignItems: 'center', width: "100%"}}>
@@ -26,11 +19,11 @@ export default function CommonLayout({children, selectedKey}: { children: React.
                     items={
                         [{name: "Tip Page", url: "tip"},
                             {name: "Log Page", url: "log"},
-                            {name: "Book Page", url: "book"},
+                            // {name: "Book Page", url: "book"},
                             {name: "KV Page", url: "fast_kv"}
                         ].map((o, index) => {
                             const key = index + 1;
-                            return {key, label: o.name,};
+                            return {key, label: o.name, url: o.url};
                         })}
                     onClick={(o) => {
                         let path = ""

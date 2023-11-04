@@ -1,8 +1,7 @@
 "use client";
-import Image from 'next/image'
 import React, {useEffect, useRef} from "react";
-import CommonLayout from "@/components/common_layout/common_layout";
 import {useRouter} from "next/navigation";
+import {jumpToLongin} from "@/app/consts";
 
 export default function Home() {
 
@@ -11,9 +10,9 @@ export default function Home() {
     useEffect(() => {
         let token = localStorage.getItem("jwt")
         if (token != null && token.length > 0) {
-            router.push("tip")
+            router.push("/tip")
         } else {
-            router.push("login")
+            jumpToLongin()
         }
     })
     return (
