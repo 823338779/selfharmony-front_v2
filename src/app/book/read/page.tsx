@@ -1,7 +1,7 @@
 'use client';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import PdfRender from "@/components/pdf_render/pdf_render";
-import {HOST} from "@/app/consts";
+import {HOST} from "@/settings";
 import {createRef, useEffect, useState} from "react";
 import axios from "axios";
 import {PageChangeEvent} from "@react-pdf-viewer/core";

@@ -4,7 +4,8 @@ import {Button, Card, Form, Input, List, notification} from "antd";
 import React, {useEffect, useRef, useState} from "react";
 import CommonLayout from "@/components/common_layout/common_layout";
 import axios from "axios";
-import {HOST} from "@/app/consts";
+import {HOST} from "@/settings";
+
 import TextArea, {TextAreaRef} from "antd/lib/input/TextArea";
 import {stringify} from "yaml";
 

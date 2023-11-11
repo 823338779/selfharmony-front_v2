@@ -4,12 +4,11 @@ import React, {useState} from "react";
 import {Button, Space, Table, notification, Input, Form, Modal} from "antd";
 import axios from "axios";
 import {Column} from "rc-table";
-import {HOST} from "@/app/consts";
+import {HOST} from "@/settings";
 import {stringify} from "yaml";
 import Search from "antd/es/input/Search";
 import {PlusCircleOutlined} from "@ant-design/icons";
 import Head from "next/head";
-
 
 const getTipList = (content: string = "") => {
     // let input = document.getElementById("filter_input").value

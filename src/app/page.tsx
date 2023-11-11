@@ -1,7 +1,7 @@
 "use client";
 import React, {useEffect, useRef} from "react";
 import {useRouter} from "next/navigation";
-import {jumpToLongin} from "@/app/consts";
+import {jumpToLongin} from "@/app/common";
 
 export default function Home() {
 

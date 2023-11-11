@@ -3,7 +3,8 @@ import React, {useRef} from "react";
 import {useRouter} from "next/navigation";
 import {Button, Input, InputRef} from "antd";
 import axios from "axios";
-import {HOST, openNotificationWithIcon} from "@/app/consts";
+import {openNotificationWithIcon} from "@/app/common";
+import {HOST} from "@/settings";
 
 export default function Home() {
 
