@@ -48,6 +48,7 @@ export default function fastKvPage() {
 
     const refreshData = () => {
         getFastKVList().then((resp) => {
+            console.log(resp.data.data)
             setItemList(resp.data.data)
         })
     }
@@ -64,6 +65,13 @@ export default function fastKvPage() {
             openNotificationWithIcon(resp.data.msg)
             refreshData()
         })
+    }
+
+    const doCopy = (content: string) =>{
+        const clipboard = navigator.clipboard;
+        clipboard.writeText(content).then(r =>
+            openNotificationWithIcon("复制成功")
+        );
     }
 
     const inputKeyRef = useRef<TextAreaRef>(null)
@@ -86,11 +94,18 @@ export default function fastKvPage() {
                 dataSource={itemList}
                 renderItem={(item: VKItem) => (
                     <List.Item>
-                        <Card title={item.name}>名字：{item.name} <Button type="link" danger onClick={() => {
-                            doDelete(item.id)
-                        }}>
-                            删除
-                        </Button> <br/>值：{item.value}</Card>
+                        <Card title={item.name} extra={
+                            <div>
+                                <Button type={'link'} onClick={() => {
+                                    doCopy(item.value)
+                                }}>复制</Button>
+                                <Button type={'link'} danger onClick={() => {
+                                    doDelete(item.id)
+                                }}>删除111</Button>
+                            </div>
+                        }>
+                            <TextArea value={item.value} autoSize={{minRows: 1, maxRows: 6}}/>
+                        </Card>
                     </List.Item>
                 )}
             />

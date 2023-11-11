@@ -30,8 +30,6 @@ export default function CommonLayout({children, selectedKey}: { children: React.
                         if (o.key == "1") {
                             path = "tip"
                         } else if (o.key == "3") {
-                            path = "book"
-                        } else if (o.key == "4") {
                             path = "fast_kv"
                         }
                         if (path.length > 0) {
