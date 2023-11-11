@@ -1,6 +1,5 @@
 'use client'
 
-
 import {Button, Card, Form, Input, List, notification} from "antd";
 import React, {useEffect, useRef, useState} from "react";
 import CommonLayout from "@/components/common_layout/common_layout";
@@ -79,8 +78,8 @@ export default function fastKvPage() {
     return (
         <CommonLayout selectedKey={"4"}>
             <div>
-                <TextArea ref={inputKeyRef} rows={1} placeholder={"KEY"}/>
-                <TextArea ref={inputValueRef} rows={1} placeholder={"VALUE"}/>
+                <TextArea ref={inputKeyRef} rows={1} autoSize={{minRows: 1, maxRows:6}} placeholder={"KEY"} style={{marginBottom:5}}/>
+                <TextArea ref={inputValueRef} rows={1} autoSize={{minRows: 1, maxRows:6}} placeholder={"VALUE"}/>
                 <Button onClick={() => {
                     let key = inputKeyRef.current?.resizableTextArea?.textArea.value
                     let value = inputValueRef.current?.resizableTextArea?.textArea.value
