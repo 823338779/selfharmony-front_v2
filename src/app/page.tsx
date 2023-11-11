@@ -1,20 +1,21 @@
 "use client";
-import Image from 'next/image'
-import React, {useEffect} from "react";
-import CommonLayout from "@/components/common_layout/common_layout";
+import React, {useEffect, useRef} from "react";
 import {useRouter} from "next/navigation";
-import TipManager from "@/app/tip/page";
-import Link from "next/link";
+import {jumpToLongin} from "@/app/common";
 
 export default function Home() {
 
     const router = useRouter()
 
-    useEffect(()=>{
-        router.push("tip")
+    useEffect(() => {
+        let token = localStorage.getItem("jwt")
+        if (token != null && token.length > 0) {
+            router.push("/tip")
+        } else {
+            jumpToLongin()
+        }
     })
     return (
-        <main>
-        </main>
+        <div></div>
     )
 }

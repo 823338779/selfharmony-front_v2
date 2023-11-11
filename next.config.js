@@ -6,7 +6,7 @@ const nextConfig = {
     experimental: {
         appDir: true,
     },
-    webpack: (config, { webpack }) => {
+    webpack: (config, {webpack}) => {
         config.experiments = {
             ...config.experiments,
             topLevelAwait: true,
@@ -21,8 +21,9 @@ const nextConfig = {
                 process: "process/browser",
             })
         )
+
         return config
-    },
+    }
 }
 
 module.exports = nextConfig
