@@ -77,7 +77,7 @@ export default function fastKvPage() {
     const inputKeyRef = useRef<TextAreaRef>(null)
     const inputValueRef = useRef<TextAreaRef>(null)
     return (
-        <CommonLayout selectedKey={"4"}>
+        <CommonLayout selectedKey={"3"}>
             <div>
                 <TextArea ref={inputKeyRef} rows={1} autoSize={{minRows: 1, maxRows:6}} placeholder={"KEY"} style={{marginBottom:5}}/>
                 <TextArea ref={inputValueRef} rows={1} autoSize={{minRows: 1, maxRows:6}} placeholder={"VALUE"}/>
