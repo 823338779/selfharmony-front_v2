@@ -101,7 +101,7 @@ export default function fastKvPage() {
                                 }}>复制</Button>
                                 <Button type={'link'} danger onClick={() => {
                                     doDelete(item.id)
-                                }}>删除111</Button>
+                                }}>删除</Button>
                             </div>
                         }>
                             <TextArea value={item.value} autoSize={{minRows: 1, maxRows: 6}}/>
