@@ -7,6 +7,7 @@ import {stringify} from "yaml";
 import {appendKV, deleteKV, getFastKVList} from "@/app/fast_kv/api/api";
 import {VKItem} from "@/app/fast_kv/models/model";
 import {openNotificationWithIcon} from "@/app/common";
+import {AddNewKv} from "@/app/fast_kv/components/addNewKV";
 
 
 export default function fastKvPage() {
@@ -24,13 +25,6 @@ export default function fastKvPage() {
         })
     }
 
-    const doAppend = (key: string, value: string) => {
-        appendKV(key, value).then((resp) => {
-            openNotificationWithIcon(resp.data.msg)
-            refreshData()
-        })
-    }
-
     const doDelete = (id: number) => {
         deleteKV(id).then((resp) => {
             openNotificationWithIcon(resp.data.msg)
@@ -38,28 +32,16 @@ export default function fastKvPage() {
         })
     }
 
-    const doCopy = (content: string) =>{
+    const doCopy = (content: string) => {
         const clipboard = navigator.clipboard;
         clipboard.writeText(content).then(r =>
             openNotificationWithIcon("复制成功")
         );
     }
 
-    const inputKeyRef = useRef<TextAreaRef>(null)
-    const inputValueRef = useRef<TextAreaRef>(null)
     return (
         <CommonLayout selectedKey={"3"}>
-            <div>
-                <TextArea ref={inputKeyRef} rows={1} autoSize={{minRows: 1, maxRows:6}} placeholder={"KEY"} style={{marginBottom:5}}/>
-                <TextArea ref={inputValueRef} rows={1} autoSize={{minRows: 1, maxRows:6}} placeholder={"VALUE"}/>
-                <Button onClick={() => {
-                    let key = inputKeyRef.current?.resizableTextArea?.textArea.value
-                    let value = inputValueRef.current?.resizableTextArea?.textArea.value
-                    if (value?.length && key?.length) {
-                        doAppend(key, value)
-                    }
-                }}>APPEND</Button>
-            </div>
+            <AddNewKv refreshDataCallBack={refreshData}/>
             <List
                 grid={{gutter: 16, column: 1}}
                 dataSource={itemList}

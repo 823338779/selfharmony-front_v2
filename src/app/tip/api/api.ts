@@ -20,3 +20,11 @@ export const changeStatus = (id: number, targetStatus: number) => {
         }
     )
 }
+
+export const addNewTip = (content: string, author: string) => {
+    return axios.post(getRealHost() + "tips/insert", {
+            "content": content,
+            "author": author
+        }
+    )
+}

@@ -1,9 +1,8 @@
 import {Button, Space, Table, notification, Input, Form, Modal, FormInstance} from "antd";
 import React, {useState} from "react";
-import axios from "axios";
-import {getRealHost} from "@/settings";
 import {openNotificationWithIcon} from "@/app/common";
 import {PlusCircleOutlined} from "@ant-design/icons";
+import {addNewTip} from "@/app/tip/api/api";
 
 export function TipInsert({callBack}: { callBack: (a: any) => void }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,11 +26,7 @@ export function TipInsert({callBack}: { callBack: (a: any) => void }) {
     };
 
     let postInsert = (content: string, author: string) => {
-        axios.post(getRealHost() + "tips/insert", {
-                "content": content,
-                "author": author
-            }
-        ).then((response) => {
+        addNewTip(content, author).then((response) => {
             openNotificationWithIcon(response.data)
             callBack("")
         })
