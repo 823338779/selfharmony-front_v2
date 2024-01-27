@@ -5,7 +5,7 @@ import axios from "axios";
 export const openNotificationWithIcon = (msg: any) => {
     notification.open({
         message: stringify(msg),
-        duration: 1.5
+        duration: 1
     });
 };
 
@@ -20,10 +20,7 @@ export const initForAxios = () => {
 // 请求拦截器
     axios.interceptors.request.use(
         (config) => {
-            const token = localStorage.getItem("jwt");
-            console.log('aaa')
-            console.log(localStorage)
-            config.headers.Token = token
+            config.headers.Token = localStorage.getItem("jwt")
             return config;
         },
         error => {

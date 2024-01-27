@@ -6,7 +6,7 @@
     "*.css"
   ],
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --mode development",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

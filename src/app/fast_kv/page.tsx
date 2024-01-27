@@ -1,42 +1,14 @@
 'use client'
-
 import {Button, Card, Form, Input, List, notification} from "antd";
 import React, {useEffect, useRef, useState} from "react";
 import CommonLayout from "@/components/common_layout/common_layout";
-import axios from "axios";
-import {HOST} from "@/settings";
-
 import TextArea, {TextAreaRef} from "antd/lib/input/TextArea";
 import {stringify} from "yaml";
+import {appendKV, deleteKV, getFastKVList} from "@/app/fast_kv/api/api";
+import {VKItem} from "@/app/fast_kv/models/model";
+import {openNotificationWithIcon} from "@/app/common";
 
-interface VKItem {
-    id: number,
-    name: string,
-    value: string
-}
 
-const getFastKVList = () => {
-    return axios.get(HOST + 'fast_kv/list')
-}
-
-const appendKV = (key: string, value: string) => {
-    return axios.post(HOST + 'fast_kv/append', {
-        "name": key,
-        "value": value
-    })
-}
-const deleteKV = (id: number) => {
-    return axios.post(HOST + 'fast_kv/delete', {
-        "id": id,
-    })
-}
-
-const openNotificationWithIcon = (msg: any) => {
-    notification.open({
-        message: stringify(msg),
-        duration: 1.5
-    });
-};
 export default function fastKvPage() {
     const [itemList, setItemList] = useState<VKItem[] | undefined>(undefined)
 

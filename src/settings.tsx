@@ -2,9 +2,12 @@ import {initForAxios} from "@/app/common";
 
 const a = {
     DEBUG_HOST: "http://localhost:8080/",
-    ONLINE_HOST: "https://sfharmony.shenzhuo.vip/api/",
-    ONLINE_LOCAL_HOST: "http://192.168.31.216:8080/"
+    ONLINE_HOST: "https://sfharmony.shenzhuo.vip/api/"
 }
-export const HOST = a.ONLINE_HOST
+export let HOST = a.ONLINE_HOST
+let url = window.location.host;
+if (url.indexOf('localhost:3000') != -1) {
+    HOST = a.DEBUG_HOST
+}
 
 initForAxios()
