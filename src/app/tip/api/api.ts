@@ -1,11 +1,11 @@
 import axios from "axios";
-import {HOST} from "@/settings";
+import {getRealHost} from "@/settings";
 import {reverse} from "dns";
 
 export const getTipList = (content: string = "") => {
     // let input = document.getElementById("filter_input").value
     // 上面的请求也可以这样做
-    return axios.get(HOST + 'tips/get_all', {
+    return axios.get(getRealHost() + 'tips/get_all', {
         params: {
             "input": content
         }
@@ -14,7 +14,7 @@ export const getTipList = (content: string = "") => {
 }
 
 export const changeStatus = (id: number, targetStatus: number) => {
-    return axios.post(HOST + "tips/status", {
+    return axios.post(getRealHost() + "tips/status", {
             "id": id,
             "status": targetStatus
         }

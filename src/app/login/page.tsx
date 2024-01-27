@@ -4,7 +4,7 @@ import {useRouter} from "next/navigation";
 import {Button, Input, InputRef} from "antd";
 import axios from "axios";
 import {openNotificationWithIcon} from "@/app/common";
-import {HOST} from "@/settings";
+import {getRealHost} from "@/settings";
 
 export default function Home() {
 
@@ -20,7 +20,7 @@ export default function Home() {
                     <Button style={{backgroundColor: "#caffbb"}} onClick={() => {
                         let inputPassport = passport.current?.input?.value
                         if (inputPassport != undefined && inputPassport.length > 0) {
-                            axios.get(HOST + "login?passport=" + passport.current?.input?.value).then((resp) => {
+                            axios.get(getRealHost() + "login?passport=" + passport.current?.input?.value).then((resp) => {
                                 let token = resp.data.data.token
                                 let ok = resp.data.msg
                                 localStorage.setItem("jwt", token)

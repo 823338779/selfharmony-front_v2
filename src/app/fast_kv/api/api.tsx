@@ -1,18 +1,18 @@
 import axios from "axios";
-import {HOST} from "@/settings";
+import {getRealHost} from "@/settings";
 
 export const getFastKVList = () => {
-    return axios.get(HOST + 'fast_kv/list')
+    return axios.get(getRealHost() + 'fast_kv/list')
 }
 
 export const appendKV = (key: string, value: string) => {
-    return axios.post(HOST + 'fast_kv/append', {
+    return axios.post(getRealHost() + 'fast_kv/append', {
         "name": key,
         "value": value
     })
 }
 export const deleteKV = (id: number) => {
-    return axios.post(HOST + 'fast_kv/delete', {
+    return axios.post(getRealHost() + 'fast_kv/delete', {
         "id": id,
     })
 }

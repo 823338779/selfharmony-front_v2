@@ -1,7 +1,7 @@
 import {Button, Space, Table, notification, Input, Form, Modal, FormInstance} from "antd";
 import React, {useState} from "react";
 import axios from "axios";
-import {HOST} from "@/settings";
+import {getRealHost} from "@/settings";
 import {openNotificationWithIcon} from "@/app/common";
 import {PlusCircleOutlined} from "@ant-design/icons";
 
@@ -27,7 +27,7 @@ export function TipInsert({callBack}: { callBack: (a: any) => void }) {
     };
 
     let postInsert = (content: string, author: string) => {
-        axios.post(HOST + "tips/insert", {
+        axios.post(getRealHost() + "tips/insert", {
                 "content": content,
                 "author": author
             }
