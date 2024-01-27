@@ -20,7 +20,6 @@ export default function fastKvPage() {
 
     const refreshData = () => {
         getFastKVList().then((resp) => {
-            console.log(resp.data.data)
             setItemList(resp.data.data)
         })
     }

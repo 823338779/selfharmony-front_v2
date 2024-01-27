@@ -2,6 +2,7 @@ import React from "react";
 import {Breadcrumb, Layout, Menu, MenuProps, theme} from 'antd';
 import {MenuInfo} from "rc-menu/lib/interface";
 import {useRouter} from "next/navigation";
+import {NoticeTip} from "@/components/notice_tip";
 
 const {Header, Content, Footer} = Layout;
 
@@ -48,6 +49,7 @@ export default function CommonLayout({children, selectedKey}: { children: React.
                     onClick={onTabClick}
                 />
             </Header>
+            <NoticeTip/>
             <Content style={{padding: '0 10px'}}>
                 <div className="site-layout-content" style={{maxWidth: 1000, margin: "0 auto"}}>
                     {children}
