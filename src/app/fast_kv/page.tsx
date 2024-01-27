@@ -1,7 +1,7 @@
 'use client'
 import {Button, Card, Form, Input, List, notification} from "antd";
 import React, {useEffect, useRef, useState} from "react";
-import CommonLayout from "@/components/common_layout/common_layout";
+import CommonLayout from "@/components/common_layout";
 import TextArea, {TextAreaRef} from "antd/lib/input/TextArea";
 import {stringify} from "yaml";
 import {appendKV, deleteKV, getFastKVList} from "@/app/fast_kv/api/api";

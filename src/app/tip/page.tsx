@@ -1,5 +1,5 @@
 'use client';
-import CommonLayout from "@/components/common_layout/common_layout";
+import CommonLayout from "@/components/common_layout";
 import React from "react";
 import {changeStatus, getTipList} from "@/app/tip/api/api";
 import {openNotificationWithIcon} from "@/app/common";

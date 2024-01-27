@@ -29,7 +29,6 @@ export default function CommonLayout({children, selectedKey}: { children: React.
         }
     }
 
-// @ts-ignore
     return (
         <Layout style={{minHeight: "100%"}} className="layout">
             <Header style={{alignItems: 'center', width: "100%"}}>
