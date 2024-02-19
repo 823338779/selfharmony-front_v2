@@ -13,7 +13,7 @@ export function Name() {
             }}>
                 <div style={{fontSize: 20, fontWeight: "bold", textAlign: "center"}}>陈庄</div>
                     <div style={{height:6}}></div>
-                <div style={{fontSize: 13, textAlign: "center"}}>电话：19828407612 | 邮箱：823338779@qq.com</div>
+                <div style={{fontSize: 13, textAlign: "center"}}>电话：18928407612 | 邮箱：823338779@qq.com</div>
             </div>
         </div>
     </div>

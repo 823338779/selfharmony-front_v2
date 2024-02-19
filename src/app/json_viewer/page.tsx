@@ -2,7 +2,7 @@
 
 import React, {ChangeEvent, ChangeEventHandler, useState} from "react";
 import './json_viewer.css'
-import ReactJson from "react-json-view";
+// import ReactJson from "react-json-view";
 import {list} from "postcss";
 import TextArea from "antd/lib/input/TextArea";
 
@@ -105,27 +105,26 @@ export default function fastKvPage() {
 
 
     return <>
-        <div className="column_flex" style={{height: "100%"}}>
+        {/*<div className="column_flex" style={{height: "100%"}}>*/}
 
-            <TextArea onChange={(e) => {
-                setInputJson(e.target.value)
-            }} rows={1} autoSize={{minRows: 1, maxRows: 6}} placeholder={"VALUE"}
-                      value={inputJson}/>
-            <div className="row_flex" style={{height: "100%"}}>
-                <div style={{borderRight: "solid 1px", width: "40%", height: "100%"}}>
-                    <ReactJson src={getOriJson()} theme={"google"} displayDataTypes={false} displayObjectSize={false}
-                               name={false} style={{fontFamily: "consolas", fontSize: 15, height: "100%"}} enableClipboard={false}/>
-                </div>
-                <div style={{width: "60%"}}>
-                    <input placeholder={"想找啥？可以用封号分隔多个"} onChange={(event) => {
-                        setSegment(event.target.value.split(";"))
-                    }} value={getSegmentsFormatted()} style={{width:"100%"}}
-                    />
-                    <ReactJson src={obj} theme={"google"} displayDataTypes={false} displayObjectSize={false}
-                               name={false} style={{fontFamily: "consolas", fontSize: 15, height: "100%",paddingTop:"10px",boxSizing:"border-box"}}  enableClipboard={false}/>
-                </div>
-            </div>
-        </div>
+        {/*    <TextArea onChange={(e) => {*/}
+        {/*        setInputJson(e.target.value)*/}
+        {/*    }} rows={1} autoSize={{minRows: 1, maxRows: 6}} placeholder={"VALUE"}*/}
+        {/*              value={inputJson}/>*/}
+        {/*    <div className="row_flex" style={{height: "100%"}}>*/}
+        {/*        <div style={{borderRight: "solid 1px", width: "40%", height: "100%"}}>*/}
+        {/*            <ReactJson src={getOriJson()} theme={"google"} displayDataTypes={false} displayObjectSize={false}*/}
+        {/*                       name={false} style={{fontFamily: "consolas", fontSize: 15, height: "100%"}} enableClipboard={false}/>*/}
+        {/*        </div>*/}
+        {/*        <div style={{width: "60%"}}>*/}
+        {/*            <input placeholder={"想找啥？可以用封号分隔多个"} onChange={(event) => {*/}
+        {/*                setSegment(event.target.value.split(";"))*/}
+        {/*            }} value={getSegmentsFormatted()} style={{width:"100%"}}*/}
+        {/*            />*/}
+        {/*            <ReactJson src={obj} theme={"google"} displayDataTypes={false} displayObjectSize={false}*/}
+        {/*                       name={false} style={{fontFamily: "consolas", fontSize: 15, height: "100%",paddingTop:"10px",boxSizing:"border-box"}}  enableClipboard={false}/>*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+        {/*</div>*/}
     </>
 }
-""
