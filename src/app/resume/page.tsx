@@ -19,7 +19,7 @@ export default function Home() {
                     marginTop: 3,
                     marginBottom: 3
                 }}>
-                    <div style={{fontWeight: "bold"}}>中国计量大学</div>
+                    <div style={{fontWeight: "bold", fontSize:14}}>中国计量大学</div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}>2018年09月 - 2022年06月</div>
                 </div>
                 <div style={{fontSize: 13}}>计算机科学与技术 本科</div>
@@ -151,7 +151,7 @@ export default function Home() {
                                 fontSize: 13,
                                 marginTop: 5,
                                 marginBottom: 5
-                            }}>通过服务端和客户端数据流转协议实现页面交互动态化。使业务逻辑后移到服务端，减少用户交互逻辑带来的客户端发版；
+                            }}>通过后端和客户端数据流转协议实现页面交互动态化。使业务逻辑后移到服务端，减少用户交互逻辑带来的客户端发版
                             </li>
                         </ul>
                     </li>
