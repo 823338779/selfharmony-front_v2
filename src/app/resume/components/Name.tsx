@@ -11,9 +11,9 @@ export function Name() {
                 justifyItems: "center",
                 marginLeft: 77
             }}>
-                <div style={{fontSize: 20, fontWeight: "bold", textAlign: "center"}}>陈庄</div>
+                <div style={{fontSize: 20, fontWeight: "bold", textAlign: "center"}}>蔡佳伦</div>
                     <div style={{height:6}}></div>
-                <div style={{fontSize: 13, textAlign: "center"}}>电话：18928407612 | 邮箱：823338779@qq.com</div>
+                <div style={{fontSize: 13, textAlign: "center"}}>电话：189-2840-7612 | 邮箱：823338779@qq.com</div>
             </div>
         </div>
     </div>
