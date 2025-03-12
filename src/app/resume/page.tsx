@@ -64,7 +64,7 @@ export default function Home() {
                         lineHeight: "21px"
                     }}>
                         <div style={{display: "inline", fontWeight: "bold"}}>工程技能：</div>
-                        熟悉springboot框架、dubbo分布式rpc；golang服务端开发、ElasticSearch、Redis等中间件；
+                        熟悉springboot框架、dubbo分布式rpc、Kafka消息队列、golang服务端开发、<br/>了解ElasticSearch、Redis等中间件、熟悉Mysql、Influxdb数据库；
                     </li>
                 </ul>
 
@@ -107,7 +107,7 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><b>建设监控链路管理模块</b>：利用可持久化树形结构，在SpringBoot服务框架下，快捷配置数据源代理、kafka节点、数据库订阅信息等能力，实现监控链路可修改改、可回溯的管理效果
+                    }}><b>建设监控链路管理模块</b>：利用可持久化树形结构，在SpringBoot服务框架下，快捷配置数据源代理、<br/>kafka节点、数据库订阅信息等能力，实现监控链路可修改改、可回溯的管理效果
                     </li>
 
                     <li style={{
@@ -116,7 +116,7 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><b>优化数据库存储</b>：对于监控时序数据库，优化内部倒排索引持久化策略；为倒排索引更新增加内存缓存模块，减少倒排索引刷盘时带来的磁盘IO开销
+                    }}><b>优化数据库存储引擎</b>：优化监控时序数据库influxdb倒排索引持久化策略;倒排索引更新增加内存缓存模块<br/>减少倒排索引刷盘时带来的磁盘IO开销
                     </li>
 
                     <li style={{
@@ -125,7 +125,7 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><b>新增集群配置策略的能力</b>：通过web端，来维护数据库集群的相关配置；通过给集群的维度、服务器的维度打标签，再为标签配置独有的配置信息，使用jinja2语法做配置信息渲染生成整合、生成配置文件、下发到宿主机等行为
+                    }}><b>新增集群配置策略的能力</b>：通过web端，来维护数据库集群的相关配置；通过给集群、宿主机维度添加标签来映射目标单位具备的配置值；使用jinja2语法做配置信息渲染生成整合、生成配置文件<br/>并下发到宿主机等行为
                     </li>
 
                     <li style={{
@@ -134,7 +134,7 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}>对现有的ansible运维脚本进行转义，通过重写的python脚本，把服务器的运维操作做独立实现，实现插件化远程服务器运维操作
+                    }}>对现有的ansible运维脚本进行转义，通过重写的python脚本，把服务器的运维操作做独立实现，<br/>实现插件化远程服务器运维操作
                     </li>
                 </ul>
 
@@ -180,8 +180,8 @@ export default function Home() {
                                 marginTop: 5,
                                 marginBottom: 5,
                                 lineHeight: "21px"
-                            }}><b>从0到1参与开发服务端动态渲染方案</b>，跨团队制定协议方案；对于原有购物车页面进行代码重构，指定且适配服务端渲染协议
-                                <br/>实现根据服务端配置view、actions等配置进行对接渲染和交互效果
+                            }}><b>从0到1参与开发服务端动态渲染方案</b>，跨团队制定协议方案；对于原有购物车页面进行代码重构，<br/>
+                                适配服务端渲染协议实现根据服务端配置view、actions等配置进行对接渲染和交互效果
                             </li>
 
                             <li style={{
@@ -190,7 +190,7 @@ export default function Home() {
                                 marginTop: 5,
                                 marginBottom: 5,
                                 lineHeight: "21px"
-                            }}>基于Golang微服务框架，维护服务端Api层业务迭代；
+                            }}><b>基于Golang微服务框架</b>，维护服务端Api层业务迭代；
                             </li>
 
                             <li style={{
@@ -232,7 +232,7 @@ export default function Home() {
                                 marginTop: 5,
                                 marginBottom: 5,
                                 lineHeight: "21px"
-                            }}>通过后端和客户端数据流转协议实现页面交互动态化。使业务逻辑后移到服务端，减少用户交互逻辑带来的客户端发版
+                            }}>通过后端和客户端数据流转协议实现页面交互动态化。使业务逻辑后移到服务端，<br/>大幅减少用户交互逻辑带来的客户端发版
                             </li>
                         </ul>
                     </li>
