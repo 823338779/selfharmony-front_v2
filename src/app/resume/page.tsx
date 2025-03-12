@@ -43,12 +43,10 @@ export default function Home() {
                 <Header content={'ICPC/ACM竞赛经历'}></Header>
                 <ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20}}>
                     <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>本科期间 获得
-                        <div style={{display: "inline", fontWeight: "bold"}}>ICPC/ACM竞赛 银奖；EC-Final铜奖；蓝桥杯竞赛浙江省一等奖；国赛二等奖等；</div>
+                        <div style={{display: "inline", fontWeight: "bold"}}>ICPC/ACM竞赛 EC-Final铜奖</div>
                     </li>
 
-                    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>字节跳动举办
-                        <div style={{display: "inline", fontWeight: "bold"}}>ByteCamp程序设计竞赛</div>
-                        员工榜团队排名第四；（2023/8）
+                    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>蓝桥杯竞赛浙江省一等奖；国赛二等奖等
                     </li>
                 </ul>
 
@@ -64,12 +62,13 @@ export default function Home() {
                         marginTop: 3,
                         marginBottom: 3
                     }}>
-                        <div style={{display: "inline", fontWeight: "bold"}}>工程能力</div>
-                        ：熟悉InnoDB运行原理；golang服务端开发、ES、Redis等中间件；
+                        <div style={{display: "inline", fontWeight: "bold"}}>工程技能：</div>
+                        熟悉springboot框架、dubbo分布式rpc；golang服务端开发、ES、Redis等中间件；
                     </li>
                 </ul>
 
                 <Header content={'工作经历'}></Header>
+
                 <div style={{
                     display: "flex",
                     flexDirection: "row",
@@ -79,8 +78,75 @@ export default function Home() {
                     marginTop: 3,
                     marginBottom: 3
                 }}>
-                    <div style={{fontWeight: "bold"}}>字节跳动-抖音电商团队</div>
-                    <div style={{fontSize: 13, verticalAlign: "middle"}}>2022年08月 - 至今</div>
+                    <div style={{display:"flex", flexDirection:"row", alignContent:"center", alignItems:"center"}}>
+                        <img style={{height:35, paddingRight:15}} src={"./pdd.jpg"}/>
+                        <div style={{fontWeight: "bold"}}>拼多多集团-TEMU跨境电商-基础架构团队</div>
+                    </div>
+                    <div style={{fontSize: 13, verticalAlign: "middle"}}>2024年04月 - 2025年03月</div>
+                </div>
+
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignContent: "space-between",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    marginTop: 3,
+                    marginBottom: 3
+                }}>
+                    <div style={{fontWeight: "", fontSize: 14}}>基础架构服务端</div>
+                    <div style={{fontSize: 13, verticalAlign: "middle"}}>Base 上海</div>
+                </div>
+
+                <ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20, paddingRight: 0}}>
+
+                    <li style={{
+                        paddingLeft: 0,
+                        fontSize: 13,
+                        marginTop: 5,
+                        marginBottom: 5
+                    }}>建设监控链路管理模块：利用可持久化树形结构，在SpringBoot服务框架下，快捷配置数据源代理、kafka节点、数据库订阅信息等能力<br/>实现监控链路可修改改、可回溯的管理效果
+                    </li>
+
+                    <li style={{
+                        paddingLeft: 0,
+                        fontSize: 13,
+                        marginTop: 5,
+                        marginBottom: 5
+                    }}>优化数据库存储：对于监控时序数据库，优化内部倒排索引持久化策略；为倒排索引更新增加内存缓存模块，减少倒排索引刷盘时带来的磁盘IO开销
+                    </li>
+
+                    <li style={{
+                        paddingLeft: 0,
+                        fontSize: 13,
+                        marginTop: 5,
+                        marginBottom: 5
+                    }}>对现有的ansible运维脚本进行转义，通过重写的python脚本，实现独立于ansible框架的插件化运维，实现维护远程服务器
+                    </li>
+
+                    <li style={{
+                        paddingLeft: 0,
+                        fontSize: 13,
+                        marginTop: 5,
+                        marginBottom: 5
+                    }}>新指集群配置策略的能力：通过web端，来维护数据库集群的相关配置；通过给集群的维度、服务器的维度打标签，再为标签配置独有的配置信息，实现配置动态化调整的效果，达到通过web端来维护多份配置信息并且进行整合、覆盖等场景
+                    </li>
+                </ul>
+
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignContent: "space-between",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    marginTop: 3,
+                    marginBottom: 3
+                }}>
+                    <div style={{display:"flex", flexDirection:"row", alignContent:"center", alignItems:"center"}}>
+                        <img style={{height:35, paddingRight:15}} src={"./bd1.svg"}/>
+                        <div style={{fontWeight: "bold"}}>字节跳动-电商团队</div>
+                    </div>
+                    <div style={{fontSize: 13, verticalAlign: "middle"}}>2022年03月 - 2024年04月</div>
                 </div>
 
                 <div style={{
@@ -93,16 +159,24 @@ export default function Home() {
                     marginBottom: 3
                 }}>
                     <div style={{fontWeight: "", fontSize: 14}}>客户端开发工程师</div>
-                    <div style={{fontSize: 13, verticalAlign: "middle"}}>工作地 上海</div>
+                    <div style={{fontSize: 13, verticalAlign: "middle"}}>Base 上海</div>
                 </div>
 
                 <ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20}}>
                     <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>
                         <div style={{display: "inline", fontWeight: "bold"}}>业务维度</div>
-                        ：负责电商相关业务需求迭代和技术演进
+                        ：负责抖音电商购物车模块业务需求迭代和技术演进
                         <ul className='menu_two' style={{
                             paddingLeft: 20
                         }}>
+                            <li style={{
+                                paddingLeft: 0,
+                                fontSize: 13,
+                                marginTop: 5,
+                                marginBottom: 5
+                            }}>从零到一参与开发服务端动态渲染方案，跨团队制定协议方案，
+                            </li>
+
                             <li style={{
                                 paddingLeft: 0,
                                 fontSize: 13,
@@ -156,184 +230,7 @@ export default function Home() {
                         </ul>
                     </li>
                 </ul>
-
-
-                <div style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignContent: "space-between",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginTop: 3,
-                    marginBottom: 3
-                }}>
-                    <div style={{fontWeight: "bold"}}>字节跳动-抖音盒子团队（实习）</div>
-                    <div style={{fontSize: 13, verticalAlign: "middle"}}>2022年03月 - 2022年8月</div>
-                </div>
-
-                <div style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignContent: "space-between",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginTop: 3,
-                    marginBottom: 3
-                }}>
-                    <div style={{fontWeight: "", fontSize: 14}}>客户端开发工程师</div>
-                    <div style={{fontSize: 13, verticalAlign: "middle"}}>工作地 上海</div>
-                </div>
-
-                <ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20}}>
-
-                    <li style={{
-                        paddingLeft: 0,
-                        fontSize: 13,
-                        marginTop: 5,
-                        marginBottom: 5
-                    }}>维护电商子页面，支持业务迭代；
-                    </li>
-                    <li style={{
-                        paddingLeft: 0,
-                        fontSize: 13,
-                        marginTop: 5,
-                        marginBottom: 5
-                    }}>建设线上监控和报警等机制；
-                    </li>
-                </ul>
-
-
-                <Header content={'项目经历'}></Header>
-
-                <div style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignContent: "space-between",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginTop: 3,
-                    marginBottom: 3
-                }}>
-                    <div style={{fontWeight: "bold"}}>UI渲染动态化方案</div>
-                </div>
-
-                <ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20}}>
-                    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>
-                        <div style={{display: "inline", fontWeight: "bold"}}>初衷</div>
-                        ：减少UI变更带来的业务迭代发版成本，实现UI视图块级别的动态化渲染，提升动态渲染性能。
-                    </li>
-                    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>
-                        <div style={{display: "inline", fontWeight: "bold"}}>特点</div>
-                        <ul className='menu_two' style={{
-                            paddingLeft: 20
-                        }}>
-                            <li style={{
-                                paddingLeft: 0,
-                                fontSize: 13,
-                                marginTop: 5,
-                                marginBottom: 5
-                            }}>基于自研协议来进行视图信息描述，实现动态化视图；
-                            </li>
-                            <li style={{
-                                paddingLeft: 0,
-                                fontSize: 13,
-                                marginTop: 5,
-                                marginBottom: 5
-                            }}>通过前端代码进行协议的解析和渲染；
-                            </li>
-                            <li style={{
-                                paddingLeft: 0,
-                                fontSize: 13,
-                                marginTop: 5,
-                                marginBottom: 5
-                            }}>显著减少前端UI代码量，提高需求迭代效率；
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignContent: "space-between",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginTop: 3,
-                    marginBottom: 3
-                }}>
-                    <div style={{fontWeight: "bold"}}>页面级别动态化方案</div>
-                </div>
-
-                <ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20}}>
-                    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>
-                        <div style={{display: "inline", fontWeight: "bold"}}>初衷</div>
-                        ：为了实现页面级别的动态化，进一步减少交互逻辑和UI渲染带来的业务发版；
-                    </li>
-                    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 15}}>
-                        <div style={{display: "inline", fontWeight: "bold"}}>特点</div>
-                        <ul className='menu_two' style={{
-                            paddingLeft: 20
-                        }}>
-                            <li style={{
-                                paddingLeft: 0,
-                                fontSize: 13,
-                                marginTop: 5,
-                                marginBottom: 5
-                            }}>通过数据交互协议实现页面样式和交互效果；
-                            </li>
-                            <li style={{
-                                paddingLeft: 0,
-                                fontSize: 13,
-                                marginTop: 5,
-                                marginBottom: 5
-                            }}>
-                                减少前端代码量，通过配置协议的方式实现页面动态化；
-                            </li>
-                            <li style={{
-                                paddingLeft: 0,
-                                fontSize: 13,
-                                marginTop: 5,
-                                marginBottom: 5
-                            }}>
-                                服务端具有更大的业务掌控力，简化业务迭代复杂度；
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-
-                {/*<div style={{*/}
-                {/*    display: "flex",*/}
-                {/*    flexDirection: "column",*/}
-                {/*    marginTop: 3,*/}
-                {/*    marginBottom: 3*/}
-                {/*}}>*/}
-                {/*    <div style={{fontWeight: "bold"}}>负责电商子页面技术和需求迭代</div>*/}
-                {/*    <div style={{fontSize: 13, marginTop: 5}}>业务负责人</div>*/}
-                {/*</div>*/}
-
-                {/*<ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20}}>*/}
-                {/*    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>*/}
-                {/*        基于渲染和页面级别动态化方案，实现电商业务;*/}
-                {/*    </li>*/}
-                {/*    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>*/}
-                {/*        基于动态化方案长期支持业务迭代；*/}
-                {/*    </li>*/}
-                {/*    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>*/}
-                {/*        优化用户体验和页面性能；*/}
-                {/*    </li>*/}
-
-                {/*</ul>*/}
-
             </div>
         </div>
     )
 }
-
-/**
- * 初衷：减少UI变更带来的业务迭代发版成本，实现UI视图块级别的动态化渲染。
- * 特点：
- * 基于自设计的协议来进行视图信息描述，实现动态化视图；
- * 通过客户端代码进行协议的解析和渲染；
- * 显著减少前端UI代码量，提高需求迭代效率；
- */
