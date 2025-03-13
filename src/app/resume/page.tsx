@@ -64,7 +64,7 @@ export default function Home() {
                         lineHeight: "21px"
                     }}>
                         <div style={{display: "inline", fontWeight: "bold"}}>工程技能：</div>
-                        熟悉springboot框架、dubbo分布式rpc、Kafka消息队列、golang服务端开发、<br/>了解ElasticSearch、Redis等中间件、熟悉Mysql、Influxdb数据库；
+                        熟悉springboot框架、dubbo分布式rpc、golang服务端开发、<br/>了解ElasticSearch、Redis等中间件、Kafka消息队列、熟悉Mysql、Influxdb数据库；
                     </li>
                 </ul>
 
