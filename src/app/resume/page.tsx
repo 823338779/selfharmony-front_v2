@@ -64,7 +64,7 @@ export default function Home() {
                         lineHeight: "21px"
                     }}>
                         <div style={{display: "inline", fontWeight: "bold"}}>工程技能：</div>
-                        熟悉springboot框架、dubbo分布式rpc、golang服务端开发、<br/>了解ElasticSearch、Redis等中间件、Kafka消息队列、熟悉Mysql、Influxdb数据库；
+                        熟悉springboot框架、dubbo分布式rpc、golang服务端开发、<br/>熟悉Mysql、Influxdb数据库；了解ElasticSearch、Redis、Kafka消息队列等中间件
                     </li>
                 </ul>
 
@@ -116,7 +116,7 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><b>优化数据库存储引擎</b>：优化监控时序数据库influxdb倒排索引持久化策略;倒排索引更新增加内存缓存模块<br/>减少倒排索引刷盘时带来的磁盘IO开销
+                    }}><b>优化数据库存储引擎</b>：优化监控时序数据库influxdb倒排索引持久化策略；<b>为倒排索引增加内存缓存模块</b><br/>减少倒排索引刷盘时带来的磁盘IO开销
                     </li>
 
                     <li style={{
@@ -125,7 +125,7 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><b>新增集群配置策略的能力</b>：通过web端，来维护数据库集群的相关配置；通过给集群、宿主机维度添加标签来映射目标单位具备的配置值；使用jinja2语法做配置信息渲染生成整合、生成配置文件<br/>并下发到宿主机等行为
+                    }}><b>集群配置策略的能力</b>：通过web端，来维护数据库集群的相关配置；通过给集群、宿主机维度添加标签来映射目标单位具备的配置值；使用jinja2语法做配置信息渲染生成整合、生成数据库设备所需配置文件
                     </li>
 
                     <li style={{
