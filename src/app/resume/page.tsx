@@ -107,7 +107,7 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><b>建设监控链路管理模块</b>：利用可持久化树形结构，在SpringBoot服务框架下，快捷配置数据源代理、<br/>kafka节点、数据库订阅信息等能力，实现监控链路可修改改、可回溯的管理效果
+                    }}><b>建设监控链路管理模块</b>：利用可持久化树形结构，在SpringBoot服务框架下，快捷配置数据源代理、<br/>kafka节点、数据库订阅信息等能力，实现监控链路可修改、可回溯的管理效果
                     </li>
 
                     <li style={{
