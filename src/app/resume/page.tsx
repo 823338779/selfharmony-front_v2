@@ -64,7 +64,7 @@ export default function Home() {
                         lineHeight: "21px"
                     }}>
                         <div style={{display: "inline", fontWeight: "bold"}}>工程技能：</div>
-                        熟悉springboot框架、dubbo分布式rpc、golang服务端开发、<br/>熟悉Mysql、Influxdb数据库；了解ElasticSearch、Redis、Kafka消息队列等中间件
+                        熟悉springboot框架、golang服务端开发、Influxdb数据库<br/>熟悉Mysql、React前端框架；了解ElasticSearch、Redis、Kafka消息队列等中间件
                     </li>
                 </ul>
 
@@ -134,7 +134,7 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}>对现有的ansible运维脚本进行转义，通过重写的python脚本，把服务器的运维操作做独立实现，<br/>实现插件化远程服务器运维操作
+                    }}><b>实现集群运维脚本</b>：对现有的ansible运维脚本进行转义，通过重写的python脚本，实现插件化远程服务器运维操作
                     </li>
                 </ul>
 
@@ -180,7 +180,7 @@ export default function Home() {
                                 marginTop: 5,
                                 marginBottom: 5,
                                 lineHeight: "21px"
-                            }}><b>从0到1参与开发服务端动态渲染方案</b>，跨团队制定协议方案；对于原有购物车页面进行代码重构，<br/>
+                            }}><b>从0到1参与开发服务端低代码渲染方案</b>，跨团队制定协议方案；对于原有购物车页面进行代码重构，<br/>
                                 适配服务端渲染协议实现根据服务端配置view、actions等配置进行对接渲染和交互效果
                             </li>
 
@@ -214,7 +214,7 @@ export default function Home() {
                     </li>
                     <li style={{paddingLeft: 0, fontSize: 14, marginTop: 5, marginBottom: 5}}>
                         <div style={{display: "inline", fontWeight: "bold"}}>技术维度</div>
-                        ：建设自研UI渲染引擎和动态化交互方案
+                        ：建设自研低代码UI渲染引擎和动态化交互方案
                         <ul className='menu_two' style={{
                             paddingLeft: 20
                         }}>
