@@ -95,7 +95,7 @@ export default function Home() {
                     marginTop: 3,
                     marginBottom: 3
                 }}>
-                    <div style={{fontWeight: "", fontSize: 14}}><b>基础架构服务端</b></div>
+                    <div style={{fontWeight: "", fontSize: 14}}><b>基础架构服务端：负责监控管理平台</b></div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}>Base 上海</div>
                 </div>
 
