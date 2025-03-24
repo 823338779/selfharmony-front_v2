@@ -81,7 +81,7 @@ export default function Home() {
                 }}>
                     <div style={{display: "flex", flexDirection: "row", alignContent: "center", alignItems: "center"}}>
                         <img style={{height: 35, paddingRight: 15}} src={"./pdd.jpg"}/>
-                        <div style={{fontWeight: "bold",fontSize: 18}}>胡桃街（上海）信息技术有限公司-TEMU基础架构团队</div>
+                        <div style={{fontWeight: "bold",fontSize: 18}}>拼多多集团-TEMU基础架构团队</div>
                     </div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2024年04月 - 2025年03月</u></div>
                 </div>
@@ -149,7 +149,7 @@ export default function Home() {
                 }}>
                     <div style={{display: "flex", flexDirection: "row", alignContent: "center", alignItems: "center"}}>
                         <img style={{height: 35, paddingRight: 15}} src={"./bd1.svg"}/>
-                        <div style={{fontWeight: "bold", fontSize: 18}}>上海格物致远网络科技有限公司</div>
+                        <div style={{fontWeight: "bold", fontSize: 18}}>字节跳动-电商团队</div>
                     </div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2022年03月 - 2024年04月</u></div>
                 </div>
