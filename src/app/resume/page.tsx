@@ -7,7 +7,7 @@ export default function Home() {
 
     return (<div style={{display: "flex", flexDirection: "column"}}>
             <img style={{height: 10, width: "100%", marginTop: 0}} src={"./blue_color.png"} alt={""}/>
-            <div style={{display: "flex", flexDirection: "column", paddingLeft: 50, paddingRight: 50}}>
+            <div style={{display: "flex", flexDirection: "column", paddingLeft: 30, paddingRight: 30}}>
                 <Name></Name>
                 <Header content={'教育经历'}></Header>
                 <div style={{
@@ -19,56 +19,83 @@ export default function Home() {
                     marginTop: 3,
                     marginBottom: 3
                 }}>
-                    <div style={{fontWeight: "bold", fontSize: 14}}>中国计量大学</div>
-                    <div style={{fontSize: 13, verticalAlign: "middle"}}>2018年09月 - 2022年06月</div>
+                    <div style={{fontWeight: "bold", fontSize: 16}}>中国计量大学</div>
+                    <div style={{fontSize: 15, verticalAlign: "middle"}}>2018年09月 - 2022年06月</div>
                 </div>
                 <div style={{fontSize: 13}}>计算机科学与技术 本科</div>
                 <ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20}}>
                     <li style={{
                         paddingLeft: 0,
-                        fontSize: 13,
+                        fontSize: 15,
                         marginTop: 5,
                         marginBottom: 5
                     }}>校一等奖学金（2018-2019）；其余奖学金多次；通过英语6级
                     </li>
                     <li style={{
                         paddingLeft: 0,
-                        fontSize: 13,
+                        fontSize: 15,
                         marginTop: 5,
                         marginBottom: 5
-                    }}>获得多种程序设计竞赛（ACM/ICPC）奖项
+                    }}><b>ICPC/ACM竞赛 EC-Final铜奖；蓝桥杯竞赛浙江省一等奖；国赛二等奖等</b>
                     </li>
                 </ul>
 
-                <Header content={'ICPC/ACM竞赛经历'}></Header>
-                <ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20}}>
-                    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>本科期间 获得
-                        <div style={{display: "inline", fontWeight: "bold"}}>ICPC/ACM竞赛 EC-Final铜奖</div>
-                    </li>
+                {/*<Header content={'ICPC/ACM竞赛经历'}></Header>*/}
+                {/*<ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20}}>*/}
+                {/*    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>本科期间 获得*/}
+                {/*        <div style={{display: "inline", fontWeight: "bold"}}>ICPC/ACM竞赛 EC-Final铜奖</div>*/}
+                {/*    </li>*/}
 
-                    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>蓝桥杯竞赛浙江省一等奖；国赛二等奖等
-                    </li>
-                </ul>
+                {/*    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>蓝桥杯竞赛浙江省一等奖；国赛二等奖等*/}
+                {/*    </li>*/}
+                {/*</ul>*/}
 
                 <Header content={'个人技能'}></Header>
                 <ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20}}>
-                    <li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>
-                        <div style={{display: "inline", fontWeight: "bold"}}>编程语言</div>
-                        ：熟悉JAVA/Kotlin、golang；充分理解常用数据结构和算法：树形结构等
-                    </li>
+                    {/*<li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>*/}
+                    {/*    <div style={{display: "inline", fontWeight: "bold"}}>编程语言</div>*/}
+                    {/*    ：熟悉JAVA/Kotlin、golang；充分理解常用数据结构和算法：树形结构等*/}
+                    {/*</li>*/}
                     <li style={{
                         paddingLeft: 0,
-                        fontSize: 13,
+                        fontSize: 15,
                         marginTop: 3,
                         marginBottom: 3,
                         lineHeight: "21px"
                     }}>
                         <div style={{display: "inline", fontWeight: "bold"}}>工程技能：</div>
-                        熟悉springboot框架、golang服务端开发、Influxdb数据库<br/>熟悉Mysql、React前端框架；了解ElasticSearch、Redis、Kafka消息队列等中间件
+                        熟悉springboot相关框架、golang服务端开发、Influxdb数据库<br/><p style={{padding:0, margin:0, marginLeft:75}}>熟悉Mysql；了解ElasticSearch、Redis、Kafka消息队列等中间件</p>
                     </li>
                 </ul>
 
                 <Header content={'工作经历'}></Header>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignContent: "space-between",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    marginTop: 3,
+                    marginBottom: 3
+                }}>
+                    <div style={{display: "flex", flexDirection: "row", alignContent: "center", alignItems: "center"}}>
+                        {/*<img style={{height: 35, paddingRight: 15, visibility: "hidden"}} src={""}/>*/}
+                        <div style={{fontWeight: "bold",fontSize: 18}}>浙江大应科技-指标平台</div>
+                    </div>
+                    <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2025年04月 - 至今</u></div>
+                </div>
+                <ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20, paddingRight: 0}}>
+
+                    <li style={{
+                        paddingLeft: 0,
+                        fontSize: 14,
+                        marginTop: 5,
+                        marginBottom: 5,
+                        lineHeight: "21px"
+                    }}><b>重构调度模块：</b>对原有调度模块进行优化重构；以不同的策略面向不同的数据库引擎（如Doris、DataBricks等）实现数据库引擎更新请求异步执行。<br/>
+                       <p style={{padding:0, margin:0, marginLeft:100}}>实现滑动窗口限流；支持服务終端重启后能够回复数据库更新任务上下文信息</p>
+                    </li>
+                </ul>
 
                 <div style={{
                     display: "flex",
@@ -107,7 +134,7 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><b>建设监控链路管理模块</b>：利用可持久化树形结构，在SpringBoot服务框架下，快捷配置数据源代理、<br/>kafka节点、数据库订阅信息等能力，实现监控链路可修改、可回溯的管理效果
+                    }}><b>优化数据库存储引擎InfluxDB</b>：优化监控时序数据库influxdb倒排索引持久化策略；<b>为倒排索引增加内存缓存模块</b><br/>减少倒排索引刷盘时带来的磁盘IO开销
                     </li>
 
                     <li style={{
@@ -116,7 +143,8 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><b>优化数据库存储引擎</b>：优化监控时序数据库influxdb倒排索引持久化策略；<b>为倒排索引增加内存缓存模块</b><br/>减少倒排索引刷盘时带来的磁盘IO开销
+                    }}><b>建设监控链路管理模块</b>：利用可持久化树形结构，在SpringBoot服务框架下，快捷配置数据源代理、<br/>
+                        <p style={{padding:0, margin:0, marginLeft:0}}>kafka节点、数据库订阅信息等能力，实现监控链路可修改、可回溯的管理效果</p>
                     </li>
 
                     <li style={{
