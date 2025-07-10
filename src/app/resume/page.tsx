@@ -3,6 +3,7 @@ import React, {useEffect, useRef} from "react";
 import {Header} from "@/app/resume/components/resume_component_header";
 import {Name} from "@/app/resume/components/Name";
 import {Block} from "@/app/resume/components/Block";
+import {Block1} from "@/app/resume/components/Block1";
 
 export default function Home() {
 
@@ -23,7 +24,7 @@ export default function Home() {
                     <div style={{fontWeight: "bold", fontSize: 16}}>中国计量大学</div>
                     <div style={{fontSize: 15, verticalAlign: "middle"}}>2018年09月 - 2022年06月</div>
                 </div>
-                <div style={{fontSize: 13}}>计算机科学与技术-本科</div>
+                <div style={{fontSize: 15}}>计算机科学与技术-本科</div>
                 <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0}}>
                     <div style={{
                         listStyle: "none",
@@ -34,7 +35,7 @@ export default function Home() {
                         marginBottom: 5
                     }}>
                         {/*<Block/> */}
-                        校一等奖学金（2018-2019）；其余奖学金多次；通过英语6级
+                        校一等奖学金（2018-2019）与其余奖学金多次；通过英语6级
                     </div>
                     <div style={{
                         paddingLeft: 0,
@@ -74,7 +75,7 @@ export default function Home() {
                         <div style={{display: "inline", fontWeight: "bold"}}>
                             工程技能：
                         </div>
-                        熟悉springboot相关框架；nacos配置中心；Mysql数据库；ElasticSearch、Redis缓存、Kafka消息队列等中间件
+                        熟练使用JAVA、GoLang编程语言；熟悉springboot相关框架，Mysql数据库；ElasticSearch、Redis缓存、Kafka消息队列等中间件；
                     </div>
                 </div>
 
@@ -94,11 +95,11 @@ export default function Home() {
                 {/*    </div>*/}
                 {/*    <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2025年04月 - 至今</u></div>*/}
                 {/*</div>*/}
-                {/*<div style={{fontWeight: "", fontSize: 14}}><b>指标平台服务端：JAVA开发工程师</b></div>*/}
+                {/*<div style={{fontWeight: "", fontSize: 16}}><b>指标平台服务端：JAVA开发工程师</b></div>*/}
                 {/*<ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20, paddingRight: 0}}>*/}
                 {/*    <li style={{*/}
                 {/*        paddingLeft: 0,*/}
-                {/*        fontSize: 14,*/}
+                {/*        fontSize: 16,*/}
                 {/*        marginTop: 5,*/}
                 {/*        marginBottom: 5,*/}
                 {/*        lineHeight: "21px"*/}
@@ -110,6 +111,7 @@ export default function Home() {
                 {/*    </li>*/}
                 {/*</ul>*/}
 
+                <div style={{height:10}}></div>
                 <div style={{
                     display: "flex",
                     flexDirection: "row",
@@ -135,7 +137,7 @@ export default function Home() {
                     marginTop: 3,
                     marginBottom: 3
                 }}>
-                    <div style={{fontWeight: "", fontSize: 14}}><b>基础架构服务端：监控平台</b></div>
+                    <div style={{fontWeight: "", fontSize: 16}}><b>基础架构服务端：监控平台</b></div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}>Base 上海</div>
                 </div>
 
@@ -143,51 +145,51 @@ export default function Home() {
 
                     <div style={{
                         paddingLeft: 0,
-                        fontSize: 14,
+                        fontSize: 16,
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><Block/><b>优化监控数据存储引擎</b>：优化数据库引擎中倒排索引部分的刷盘策略，为原有的倒排索引建立内存维度的缓存，实现批量对倒排索引刷盘，有效减少磁盘平均IO负载
+                    }}><Block/><b>优化监控数据存储引擎【开发语言GoLang】</b>优化数据库引擎中倒排索引部分的刷盘策略，<span style={{paddingLeft:0}}>为原有的倒排索引建立内存维度的缓存，实现倒排索引数据批量刷盘，有效减少磁盘平均IO负载</span>
                     </div>
 
                     <div style={{
                         paddingLeft: 0,
-                        fontSize: 14,
+                        fontSize: 16,
                         marginTop: 0,
                         marginBottom: 0
                     }}><Block/><b>数据库集群配置平台</b>
-                        <ul style={{margin:0}}>
-                            <li>通过配置平台实现集群配置变更，平台上的配置信息接入代码仓库，配置文件的内容同步到gitlab</li>
-                            <li>通过设计行为标签的概念，每一个标签对应一个配置文件；使用时候通过选中的标签映射到具体配置</li>
-                            <li>使用jinja2的语法提供配置文件的模板，支持配置模板和配置数据之间动态绑定</li>
-                        </ul>
+                        <div style={{margin:0, paddingLeft:20}}>
+                            <div><Block1/> 通过配置平台实现集群配置变更，平台上的配置信息接入代码仓库，配置文件的内容同步到gitlab</div>
+                            <div><Block1/> 使用jinja2的语法提供配置文件的模板，支持配置模板和配置数据之间动态绑定</div>
+                            <div><Block1/> 设计"标签"的概念代替具体配置文件，使用中面向标签选择使用即可，有效降低操作门槛</div>
+                        </div>
                         {/*来维护数据库集群的相关配置；通过给集群、宿主机维度添加标签来映射目标单位具备的配置值；使用jinja2语法做配置信息渲染生成整合、生成数据库设备所需配置文件*/}
                     </div>
 
                     <div style={{
                         paddingLeft: 0,
-                        fontSize: 14,
+                        fontSize: 16,
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><Block/><b>建设数据链路管理功能：</b>利用持久化树形结构，在管理平台上打通数据库引擎、kafka节点之间数据流订阅配置；实现数据源代理、<br/>
-                        <p style={{
-                            padding: 0,
-                            margin: 0,
-                            marginLeft: 20
-                        }}>数据库订阅信息等能力敏捷配置，实现监控链路可修改、可回溯的管理效果</p>
+                    }}><Block/><b>建设数据链路管理功能：</b>
+                        {/*利用持久化树形结构，在管理平台上打通数据库引擎、kafka节点之间数据流订阅配置；实现数据源代理、数据库订阅信息等能力敏捷配置，实现监控链路可修改、可回溯的管理效果*/}
+                        <div style={{margin:0, paddingLeft:20}}>
+                            <div><Block1/> 利用持久化树形结构，在管理平台上提供数据链路的展示和变更操作，实现监控链路可修改、<br/><span>可回溯的管理效果</span></div>
+                            <div><Block1/> 打通数据库引擎、kafka节点配置，实现数据源代理、数据库订阅信息等能力敏捷配置</div>
+                        </div>
                     </div>
 
                     {/*<div style={{*/}
                     {/*    paddingLeft: 0,*/}
-                    {/*    fontSize: 14,*/}
+                    {/*    fontSize: 16,*/}
                     {/*    marginTop: 5,*/}
                     {/*    marginBottom: 5,*/}
                     {/*    lineHeight: "21px"*/}
                     {/*}}><Block/><b>集群运维脚本：</b>对现有的ansible运维脚本进行转义，通过重写的python脚本，实现插件化远程服务器运维操作*/}
                     {/*</div>*/}
                 </div>
-
+                <div style={{height:10}}></div>
                 <div style={{
                     display: "flex",
                     flexDirection: "row",
@@ -213,12 +215,12 @@ export default function Home() {
                     marginTop: 3,
                     marginBottom: 3
                 }}>
-                    <div style={{fontWeight: "", fontSize: 14}}><b>客户端开发工程师</b></div>
+                    <div style={{fontWeight: "", fontSize: 16}}><b>客户端开发工程师</b></div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}>Base 上海</div>
                 </div>
 
                 <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0}}>
-                    <div style={{paddingLeft: 0, fontSize: 14, marginTop: 5, marginBottom: 5}}>
+                    <div style={{paddingLeft: 0, fontSize: 16, marginTop: 5, marginBottom: 5}}>
                         <div style={{display: "inline", fontWeight: "bold"}}>业务维度</div>
                         ：负责抖音电商购物车模块业务需求迭代和技术演进
                         <div className='menu_two' style={{
@@ -226,43 +228,43 @@ export default function Home() {
                         }}>
                             <div style={{
                                 paddingLeft: 0,
-                                fontSize: 14,
+                                fontSize: 16,
                                 marginTop: 5,
                                 marginBottom: 5,
                                 lineHeight: "21px"
-                            }}><Block/><b>从0到1参与开发服务端低代码渲染方案</b>，跨团队制定协议方案；对于原有购物车页面进行代码重构，<br/>
+                            }}><Block1/><b>从0到1参与开发服务端低代码渲染方案</b>，跨团队制定协议方案；对于原有购物车页面进行代码重构，<br/>
                                 适配服务端渲染协议实现根据服务端配置view、actions等配置进行对接渲染和交互效果
                             </div>
 
                             <div style={{
                                 paddingLeft: 0,
-                                fontSize: 14,
+                                fontSize: 16,
                                 marginTop: 5,
                                 marginBottom: 5,
                                 lineHeight: "21px"
-                            }}><Block/><b>基于Golang微服务框架</b>，维护服务端Api层业务迭代；
+                            }}><Block1/><b>基于Golang微服务框架</b>，维护服务端Api层业务迭代；
                             </div>
 
                             <div style={{
                                 paddingLeft: 0,
-                                fontSize: 14,
+                                fontSize: 16,
                                 marginTop: 5,
                                 marginBottom: 5,
                                 lineHeight: "21px"
-                            }}><Block/>基于自研全局动态化方案长期支持业务和技术迭代；
+                            }}><Block1/>基于自研全局动态化方案长期支持业务和技术迭代；
                             </div>
 
                             <div style={{
                                 paddingLeft: 0,
-                                fontSize: 14,
+                                fontSize: 16,
                                 marginTop: 5,
                                 marginBottom: 5,
                                 lineHeight: "21px"
-                            }}><Block/>跟进业务需求迭代，用React、android-native等平台开发视图、交互、前端性能优化等
+                            }}><Block1/>跟进业务需求迭代，用React、android-native等平台开发视图、交互、前端性能优化等
                             </div>
                         </div>
                     </div>
-                    <div style={{paddingLeft: 0, fontSize: 14, marginTop: 5, marginBottom: 5}}>
+                    <div style={{paddingLeft: 0, fontSize: 16, marginTop: 5, marginBottom: 5}}>
                         <div style={{display: "inline", fontWeight: "bold"}}>技术维度</div>
                         ：建设自研低代码UI渲染引擎和动态化交互方案
                         <div className='menu_two' style={{
@@ -270,19 +272,19 @@ export default function Home() {
                         }}>
                             <div style={{
                                 paddingLeft: 0,
-                                fontSize: 14,
+                                fontSize: 16,
                                 marginTop: 5,
                                 marginBottom: 5,
                                 lineHeight: "21px"
-                            }}><Block/>通过自研协议实现高性能UI动态化渲染；减少前端样式改动导致的发版；
+                            }}><Block1/>通过自研协议实现高性能UI动态化渲染；减少前端样式改动导致的发版；
                             </div>
                             <div style={{
                                 paddingLeft: 0,
-                                fontSize: 14,
+                                fontSize: 16,
                                 marginTop: 5,
                                 marginBottom: 5,
                                 lineHeight: "21px"
-                            }}><Block/>通过后端和客户端数据流转协议实现页面交互动态化。使业务逻辑后移到服务端，<br/>大幅减少用户交互逻辑带来的客户端发版
+                            }}><Block1/>通过后端和客户端数据流转协议实现页面交互动态化。使业务逻辑后移到服务端，<br/>大幅减少用户交互逻辑带来的客户端发版
                             </div>
                         </div>
                     </div>
