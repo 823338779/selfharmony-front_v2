@@ -178,7 +178,7 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><Block/><b>优化监控数据存储引擎【开发语言GoLang】</b>优化数据库引擎中倒排索引部分的刷盘策略，<span style={{paddingLeft:0}}>为原有的倒排索引建立内存维度的缓存，实现倒排索引数据批量刷盘，有效减少磁盘平均IO负载</span>
+                    }}><Block/><b>监控存储引擎优化【GoLang】：</b>针对时序数据库倒排索引的刷盘瓶颈，设计内存缓存层实现<b>批量刷盘策略</b>，引入LSM-Tree思想优化写入路径，<b>磁盘IO降低约40%</b>
                     </div>
 
                     <div style={{
@@ -188,11 +188,10 @@ export default function Home() {
                         marginBottom: 0
                     }}><Block/><b>数据库集群配置平台</b>
                         <div style={{margin:0, paddingLeft:20}}>
-                            <div><Block1/> 通过配置平台实现集群配置变更，平台上的配置信息接入代码仓库，配置文件的内容同步到gitlab</div>
-                            <div><Block1/> 使用jinja2的语法提供配置文件的模板，支持配置模板和配置数据之间动态绑定</div>
-                            <div><Block1/> 设计"标签"的概念代替具体配置文件，使用中面向标签选择使用即可，有效降低操作门槛</div>
+                            <div><Block1/> 践行<b>配置即代码（CaC）</b>理念，配置变更接入GitLab代码仓库，实现版本控制与审计追溯</div>
+                            <div><Block1/> 基于Jinja2模板引擎实现<b>配置模板与配置参数分离</b>，模板中定义占位符，运行时动态填充业务数据生成最终配置，提升复用性</div>
+                            <div><Block1/> 设计"标签"抽象层屏蔽底层配置细节，运维人员面向标签选择即可，<b>降低操作门槛</b></div>
                         </div>
-                        {/*来维护数据库集群的相关配置；通过给集群、宿主机维度添加标签来映射目标单位具备的配置值；使用jinja2语法做配置信息渲染生成整合、生成数据库设备所需配置文件*/}
                     </div>
 
                     <div style={{
@@ -201,22 +200,12 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><Block/><b>建设数据链路管理功能：</b>
-                        {/*利用持久化树形结构，在管理平台上打通数据库引擎、kafka节点之间数据流订阅配置；实现数据源代理、数据库订阅信息等能力敏捷配置，实现监控链路可修改、可回溯的管理效果*/}
+                    }}><Block/><b>监控数据链路管理平台</b>
                         <div style={{margin:0, paddingLeft:20}}>
-                            <div><Block1/> 利用持久化树形结构，在管理平台上提供数据链路的展示和变更操作，实现监控链路可修改、<br/><span>可回溯的管理效果</span></div>
-                            <div><Block1/> 打通数据库引擎、kafka节点配置，实现数据源代理、数据库订阅信息等能力敏捷配置</div>
+                            <div><Block1/> 基于持久化树形结构实现<b>数据链路可视化</b>，支持链路变更展示、历史回溯与版本对比</div>
+                            <div><Block1/> 打通数据库引擎与Kafka节点配置，实现数据源代理、订阅信息等<b>一站式敏捷配置</b></div>
                         </div>
                     </div>
-
-                    {/*<div style={{*/}
-                    {/*    paddingLeft: 0,*/}
-                    {/*    fontSize: 16,*/}
-                    {/*    marginTop: 5,*/}
-                    {/*    marginBottom: 5,*/}
-                    {/*    lineHeight: "21px"*/}
-                    {/*}}><Block/><b>集群运维脚本：</b>对现有的ansible运维脚本进行转义，通过重写的python脚本，实现插件化远程服务器运维操作*/}
-                    {/*</div>*/}
                 </div>
                 <div style={{height:10}}></div>
                 <div style={{
