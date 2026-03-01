@@ -58,6 +58,7 @@ export default function Home() {
                 {/*    </li>*/}
                 {/*</ul>*/}
 
+
                 <Header content={'个人技能'}></Header>
                 <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0}}>
                     <div style={{
@@ -82,8 +83,8 @@ export default function Home() {
                     </div>
                 </div>
 
+                <div style={{height:20}}></div>
                 <Header content={'工作经历'}></Header>
-                <div style={{height:10}}></div>
                 <div style={{
                     display: "flex",
                     flexDirection: "row",
@@ -122,6 +123,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <div style={{height:20}}></div>
+
                 <div style={{
                     display: "flex",
                     flexDirection: "row",
@@ -188,7 +191,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div style={{height:10}}></div>
+                <div style={{height:20}}></div>
                 <div style={{
                     display: "flex",
                     flexDirection: "row",
