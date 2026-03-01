@@ -228,7 +228,7 @@ export default function Home() {
                     marginBottom: 3
                 }}>
                     <div style={{display: "flex", flexDirection: "row", alignContent: "center", alignItems: "center"}}>
-                        <img style={{height: 35, paddingRight: 15}} src={"./bd1.svg"} alt={""}/>
+                        <img style={{height: 35, paddingRight: 15}} src={"./bd1.svg"}/>
                         <div style={{fontWeight: "bold", fontSize: 18}}>字节跳动-电商团队</div>
                     </div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2022年03月 - 2024年04月</u></div>
@@ -244,17 +244,77 @@ export default function Home() {
                     marginBottom: 3
                 }}>
                     <div style={{fontWeight: "", fontSize: 16}}><b>客户端开发工程师</b></div>
+                    {/*<div style={{fontSize: 13, verticalAlign: "middle"}}>Base 上海</div>*/}
                 </div>
 
-                <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0, paddingRight: 0}}>
-                    <div style={{paddingLeft: 0, fontSize: 16, marginTop: 5, marginBottom: 5, lineHeight: "21px"}}>
-                        <Block/><b>服务端低代码渲染方案：</b>从0到1参与开发，跨团队制定协议规范，设计服务端配置驱动的UI渲染机制，支持view、actions等配置化下发，实现业务逻辑后移至服务端
+                <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0}}>
+                    <div style={{paddingLeft: 0, fontSize: 16, marginTop: 5, marginBottom: 5}}>
+                        <div style={{display: "inline", fontWeight: "bold"}}>业务维度</div>
+                        ：负责抖音电商购物车模块业务需求迭代和技术演进
+                        <div className='menu_two' style={{
+                            paddingLeft: 20
+                        }}>
+                            <div style={{
+                                paddingLeft: 0,
+                                fontSize: 16,
+                                marginTop: 5,
+                                marginBottom: 5,
+                                lineHeight: "21px"
+                            }}><Block1/><b>从0到1参与开发服务端低代码渲染方案</b>，跨团队制定协议方案；对于原有购物车页面进行代码重构，<br/>
+                                适配服务端渲染协议实现根据服务端配置view、actions等配置进行对接渲染和交互效果
+                            </div>
+
+                            <div style={{
+                                paddingLeft: 0,
+                                fontSize: 16,
+                                marginTop: 5,
+                                marginBottom: 5,
+                                lineHeight: "21px"
+                            }}><Block1/><b>基于Golang微服务框架</b>，维护服务端Api层业务迭代；
+                            </div>
+
+                            <div style={{
+                                paddingLeft: 0,
+                                fontSize: 16,
+                                marginTop: 5,
+                                marginBottom: 5,
+                                lineHeight: "21px"
+                            }}><Block1/>基于自研全局动态化方案长期支持业务和技术迭代；
+                            </div>
+
+                            <div style={{
+                                paddingLeft: 0,
+                                fontSize: 16,
+                                marginTop: 5,
+                                marginBottom: 5,
+                                lineHeight: "21px"
+                            }}><Block1/>跟进业务需求迭代，用React、android-native等平台开发视图、交互、前端性能优化等
+                            </div>
+                        </div>
                     </div>
-                    <div style={{paddingLeft: 0, fontSize: 16, marginTop: 5, marginBottom: 5, lineHeight: "21px"}}>
-                        <Block/><b>GoLang微服务开发：</b>基于内部微服务框架维护电商购物车模块API层业务迭代
-                    </div>
-                    <div style={{paddingLeft: 0, fontSize: 16, marginTop: 5, marginBottom: 5, lineHeight: "21px"}}>
-                        <Block/><b>动态化协议设计：</b>参与后端与客户端数据流转协议设计，通过协议实现页面交互动态化，减少客户端发版频率
+                    <div style={{paddingLeft: 0, fontSize: 16, marginTop: 5, marginBottom: 5}}>
+                        <div style={{display: "inline", fontWeight: "bold"}}>技术维度</div>
+                        ：建设自研低代码UI渲染引擎和动态化交互方案
+                        <div className='menu_two' style={{
+                            paddingLeft: 20
+                        }}>
+                            <div style={{
+                                paddingLeft: 0,
+                                fontSize: 16,
+                                marginTop: 5,
+                                marginBottom: 5,
+                                lineHeight: "21px"
+                            }}><Block1/>通过自研协议实现高性能UI动态化渲染；减少前端样式改动导致的发版；
+                            </div>
+                            <div style={{
+                                paddingLeft: 0,
+                                fontSize: 16,
+                                marginTop: 5,
+                                marginBottom: 5,
+                                lineHeight: "21px"
+                            }}><Block1/>通过后端和客户端数据流转协议实现页面交互动态化。使业务逻辑后移到服务端，<br/>大幅减少用户交互逻辑带来的客户端发版
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
