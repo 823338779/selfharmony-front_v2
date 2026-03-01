@@ -70,16 +70,6 @@ export default function Home() {
                         <div style={{display: "inline", fontWeight: "bold"}}>编程语言：</div>
                         熟练使用Java、GoLang
                     </div>
-                    {/*<div style={{*/}
-                    {/*    paddingLeft: 0,*/}
-                    {/*    fontSize: 15,*/}
-                    {/*    marginTop: 3,*/}
-                    {/*    marginBottom: 3,*/}
-                    {/*    lineHeight: "21px"*/}
-                    {/*}}>*/}
-                    {/*    <div style={{display: "inline", fontWeight: "bold"}}>后端框架：</div>*/}
-                    {/*    Spring Boot、Spark*/}
-                    {/*</div>*/}
                     <div style={{
                         paddingLeft: 0,
                         fontSize: 15,
@@ -87,18 +77,8 @@ export default function Home() {
                         marginBottom: 3,
                         lineHeight: "21px"
                     }}>
-                        <div style={{display: "inline", fontWeight: "bold"}}>数据存储：</div>
-                        MySQL、PostgreSQL、Redis、Doris、StarRocks等OLAP引擎
-                    </div>
-                    <div style={{
-                        paddingLeft: 0,
-                        fontSize: 15,
-                        marginTop: 3,
-                        marginBottom: 3,
-                        lineHeight: "21px"
-                    }}>
-                        <div style={{display: "inline", fontWeight: "bold"}}>中间件：</div>
-                        Redis、Kafka、Spark
+                        <div style={{display: "inline", fontWeight: "bold"}}>开发组件：</div>
+                        Redis、Kafka、Spark；MySQL、PostgreSQL、Doris、StarRocks等OLAP引擎
                     </div>
                 </div>
 
