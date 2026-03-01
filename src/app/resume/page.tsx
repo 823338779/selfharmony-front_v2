@@ -119,7 +119,7 @@ export default function Home() {
                     </div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2025年04月 - 至今</u></div>
                 </div>
-                <div style={{fontWeight: "", fontSize: 16}}><b>数据分析平台：数据任务调度负责人【JAVA技术栈】</b></div>
+                <div style={{fontWeight: "", fontSize: 16}}><b>数据分析平台-数据任务调度开发负责人【JAVA技术栈】</b></div>
                 <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0, paddingRight: 0}}>
                     <div style={{
                         paddingLeft: 0,
@@ -167,7 +167,7 @@ export default function Home() {
                     marginBottom: 3
                 }}>
                     <div style={{fontWeight: "", fontSize: 16}}><b>基础架构服务端：监控平台</b></div>
-                    <div style={{fontSize: 13, verticalAlign: "middle"}}>Base 上海</div>
+                    {/*<div style={{fontSize: 13, verticalAlign: "middle"}}>Base 上海</div>*/}
                 </div>
 
                 <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0, paddingRight: 0}}>
@@ -245,7 +245,7 @@ export default function Home() {
                     marginBottom: 3
                 }}>
                     <div style={{fontWeight: "", fontSize: 16}}><b>客户端开发工程师</b></div>
-                    <div style={{fontSize: 13, verticalAlign: "middle"}}>Base 上海</div>
+                    {/*<div style={{fontSize: 13, verticalAlign: "middle"}}>Base 上海</div>*/}
                 </div>
 
                 <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0}}>
