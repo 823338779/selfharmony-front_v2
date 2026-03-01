@@ -64,8 +64,8 @@ export default function Home() {
                     <div style={{
                         paddingLeft: 0,
                         fontSize: 15,
-                        marginTop: 3,
-                        marginBottom: 3,
+                        marginTop: 6,
+                        marginBottom: 6,
                         lineHeight: "21px"
                     }}>
                         <div style={{display: "inline", fontWeight: "bold"}}>编程语言：</div>
@@ -74,8 +74,8 @@ export default function Home() {
                     <div style={{
                         paddingLeft: 0,
                         fontSize: 15,
-                        marginTop: 3,
-                        marginBottom: 3,
+                        marginTop: 6,
+                        marginBottom: 6,
                         lineHeight: "21px"
                     }}>
                         <div style={{display: "inline", fontWeight: "bold"}}>开发组件：</div>
@@ -83,8 +83,9 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div style={{height:20}}></div>
                 <Header content={'工作经历'}></Header>
+                <div style={{height:10}}></div>
+
                 <div style={{
                     display: "flex",
                     flexDirection: "row",

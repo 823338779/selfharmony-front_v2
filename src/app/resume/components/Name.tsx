@@ -2,7 +2,7 @@ export function Name() {
 
     return <div style={{marginBottom:-10,marginTop:2}}>
         <div style={{marginTop: 0, marginBottom: 0, display: "flex", flexDirection: "row-reverse"}}>
-            <img style={{height: 110}} src={"./caijialun.jpg"} alt={""}/>
+            <img style={{height: 110}} src={"./caijialun2.png"} alt={""}/>
             <div style={{
                 display: "flex",
                 flexDirection: "column",
