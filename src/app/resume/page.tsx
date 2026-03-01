@@ -44,8 +44,7 @@ export default function Home() {
                         marginBottom: 5
                     }}>
                         {/*<Block/>*/}
-                        <b>ICPC/ACM竞赛
-                        EC-Final铜奖；蓝桥杯竞赛浙江省一等奖；国赛二等奖等</b>
+                        <b>ICPC/ACM竞赛银奖；蓝桥杯竞赛浙江省一等奖；国赛二等奖等</b>
                     </div>
                 </div>
 
@@ -129,7 +128,7 @@ export default function Home() {
                         lineHeight: "21px"
                     }}><Block/><b>0到1主导调度系统架构升级</b>
                         <div style={{margin:0, paddingLeft:20}}>
-                            <div><Block1/><b>背景：</b>原调度模块内嵌于业务系统（基于Quartz近实时触发），存在大量历史代码缺陷，执行中频繁生成长字符串导致FullGC风险；主导将调度模块独立为通用服务</div>
+                            <div><Block1/><b>背景：</b>原调度模块内嵌于业务系统（引入Quartz近实时触发），存在大量历史代码缺陷，执行中频繁生成长字符串导致FullGC风险；主导将调度模块独立为通用服务</div>
                             <div><Block1/><b>架构设计：</b>将调度模式从"近实时触发"改为"T+1预生成"，每日22点提前生成次日任务实例并固化；业务系统负责任务注册与元数据同步，调度系统独立执行，通过Kafka异步同步实例状态</div>
                             <div><Block1/><b>难点：</b>
                                 <div style={{margin:0, paddingLeft:20}}>
