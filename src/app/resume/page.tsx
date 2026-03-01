@@ -119,7 +119,7 @@ export default function Home() {
                     </div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2025年04月 - 至今</u></div>
                 </div>
-                <div style={{fontWeight: "", fontSize: 16}}><b>数据分析平台：数据任务调度负责人</b></div>
+                <div style={{fontWeight: "", fontSize: 16}}><b>数据分析平台：数据任务调度负责人【JAVA技术栈】</b></div>
                 <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0, paddingRight: 0}}>
                     <div style={{
                         paddingLeft: 0,
@@ -127,13 +127,17 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><Block/><b>主导调度系统架构升级【开发语言Java】</b>
+                    }}><Block/><b>0到1主导调度系统架构升级</b>
                         <div style={{margin:0, paddingLeft:20}}>
-                            <div><Block1/><b>业务兼容与迁移：</b>设计DSL协议化SQL动态渲染机制，支持按日期拆分任务实例、自定义日历、手动补数等复杂业务场景；实现从内部调度系统到独立调度平台的灰度平滑迁移，确保方案级任务双向迁移的幂等性和最终一致性</div>
-                            <div><Block1/><b>多引擎适配：</b>抽象调度执行层，适配Hologres、Doris、StarRocks等多种物理引擎的事务机制差异（如Hologres需显式BEGIN/COMMIT）</div>
-                            <div><Block1/><b>跨任务数据依赖（Cube场景）：</b>利用业务时间、工作流实例ID等贯穿字段动态生成临时表名，实现上下游任务间临时表数据传递</div>
-                            <div><Block1/><b>状态同步与一致性：</b>基于Kafka实现实例状态同步与运行信息同步，保证系统间最终一致性；设计审计机制确保数据可追溯</div>
-                            <div><Block1/><b>性能优化：</b>针对PostgreSQL中超长TaskInstance表导致的IO和内存负载问题，拆分出TaskInstanceBasic表并冗余业务字段，减少多表联查，显著降低数据库压力</div>
+                            <div><Block1/><b>背景：</b>原调度模块内嵌于业务系统（基于Quartz近实时触发），存在大量历史代码缺陷，执行中频繁生成长字符串导致FullGC风险；主导将调度模块独立为通用服务</div>
+                            <div><Block1/><b>架构设计：</b>将调度模式从"近实时触发"改为"T+1预生成"，每日22点提前生成次日任务实例并固化；业务系统负责任务注册与元数据同步，调度系统独立执行，通过Kafka异步同步实例状态</div>
+                            <div><Block1/><b>难点：</b>
+                                <div style={{margin:0, paddingLeft:20}}>
+                                    <div><Block1/><b>DSL协议设计：</b>独立调度服务无法承载大量业务定制化逻辑，设计任务定义DSL协议，支持日期范围拆分、自定义日历、手动补数等动态场景；实现实例化插件将DSL渲染为真实执行实例</div>
+                                    <div><Block1/><b>新老系统平滑迁移：</b>实现双调度系统并行运行，支持一键切换与容灾回滚，确保迁移过程用户无感知</div>
+                                    <div><Block1/><b>性能优化：</b>针对任务实例表中大JSON字段导致的扫盘与内存压力，拆分出独立Basic表存储高频查询字段，显著降低IO与CPU负载</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
