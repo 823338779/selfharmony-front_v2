@@ -118,7 +118,7 @@ export default function Home() {
                     </div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2025年04月 - 至今</u></div>
                 </div>
-                <div style={{fontWeight: "", fontSize: 16}}><b>数据分析平台-数据任务调度开发负责人【JAVA技术栈】</b></div>
+                <div style={{fontWeight: "", fontSize: 16}}><b>数据分析平台-数据任务调度开发负责人【Java技术栈】</b></div>
                 <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0, paddingRight: 0}}>
                     <div style={{
                         paddingLeft: 0,
@@ -126,15 +126,16 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><Block/><b>0到1主导调度系统架构升级</b>
+                    }}><Block/><b>【0到1主导】调度系统架构升级</b>
                         <div style={{margin:0, paddingLeft:20}}>
-                            <div><Block1/><b>背景：</b>原调度模块内嵌于业务系统存在比较严重的历史遗留缺陷，结合调度相关业务的产品层改造，决定把调度模块独立出去成为一个通用服务；全程主导从需求分析-架构选型-技术方案落地-功能发布上线</div>
-                            <div><Block1/><b>架构设计：</b>将调度模式从"近实时触发"改为"T+1预生成"，每日22点提前生成次日任务实例并固化；业务系统负责任务注册与元数据同步，调度系统独立执行，通过Kafka异步同步实例状态</div>
+                            <div><Block1/><b>背景：</b>原调度模块内嵌于业务系统，存在历史遗留缺陷；结合产品层改造，<b>全程主导需求分析→架构选型→方案落地→上线发布</b></div>
+                            <div><Block1/><b>架构设计：</b>将调度模式从"近实时触发"改为<b>"T+1预生成"</b>，每日22点提前生成次日任务实例并固化；业务系统负责任务注册与元数据同步，调度系统独立执行，通过<b>Kafka</b>异步同步实例状态</div>
                             <div><Block1/><b>难点：</b>
                                 <div style={{margin:0, paddingLeft:20}}>
                                     <div><Block1/><b>DSL协议设计：</b>独立调度服务无法承载大量业务定制化逻辑，设计任务定义DSL协议，支持日期范围拆分、自定义日历、手动补数等动态场景；实现实例化插件将DSL渲染为真实执行实例</div>
                                     <div><Block1/><b>新老系统平滑迁移：</b>实现双调度系统并行运行，支持一键切换与容灾回滚，确保迁移过程用户无感知</div>
-                                    <div><Block1/><b>性能优化：</b>针对任务实例表中大JSON字段导致的扫盘与内存压力，拆分出独立Basic表存储高频查询字段，显著降低IO与CPU负载</div>
+                                    <div><Block1/><b>性能优化：</b>针对任务实例表中大JSON字段导致的扫盘与内存压力，拆分出独立Basic表存储高频查询字段，<b>显著降低IO与CPU负载</b></div>
+                                    <div><Block1/><b>数据对账机制：</b>设计业务服务与调度服务之间的任务信息、执行记录对账方案，确保分布式场景下<b>数据最终一致性</b></div>
                                 </div>
                             </div>
                         </div>
