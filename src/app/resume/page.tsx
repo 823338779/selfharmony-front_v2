@@ -80,38 +80,39 @@ export default function Home() {
                 </div>
 
                 <Header content={'工作经历'}></Header>
-                {/*<div style={{*/}
-                {/*    display: "flex",*/}
-                {/*    flexDirection: "row",*/}
-                {/*    alignContent: "space-between",*/}
-                {/*    justifyContent: "space-between",*/}
-                {/*    alignItems: "center",*/}
-                {/*    marginTop: 3,*/}
-                {/*    marginBottom: 3*/}
-                {/*}}>*/}
-                {/*    <div style={{display: "flex", flexDirection: "row", alignContent: "center", alignItems: "center"}}>*/}
-                {/*        /!*<img style={{height: 35, paddingRight: 15, visibility: "hidden"}} src={""}/>*!/*/}
-                {/*        <div style={{fontWeight: "bold", fontSize: 18}}>浙江大应科技-指标平台</div>*/}
-                {/*    </div>*/}
-                {/*    <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2025年04月 - 至今</u></div>*/}
-                {/*</div>*/}
-                {/*<div style={{fontWeight: "", fontSize: 16}}><b>指标平台服务端：JAVA开发工程师</b></div>*/}
-                {/*<ul style={{marginTop: 0, marginBottom: 0, paddingLeft: 20, paddingRight: 0}}>*/}
-                {/*    <li style={{*/}
-                {/*        paddingLeft: 0,*/}
-                {/*        fontSize: 16,*/}
-                {/*        marginTop: 5,*/}
-                {/*        marginBottom: 5,*/}
-                {/*        lineHeight: "21px"*/}
-                {/*    }}><b>调度模块重构：</b>*/}
-                {/*        <ul>*/}
-                {/*            <li>对原有调度模块进行优化重构；面向不同的数据库引擎（如Doris、DataBricks等）数据更新操作异步执行</li>*/}
-                {/*            <li>代码层面实现滑动窗口限流；支持服务异常终止后重启能够恢复数据库更新任务上下文信息</li>*/}
-                {/*        </ul>*/}
-                {/*    </li>*/}
-                {/*</ul>*/}
-
                 <div style={{height:10}}></div>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignContent: "space-between",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    marginTop: 3,
+                    marginBottom: 3
+                }}>
+                    <div style={{display: "flex", flexDirection: "row", alignContent: "center", alignItems: "center"}}>
+                        <div style={{fontWeight: "bold", fontSize: 18}}>浙江大应科技-数据分析平台-数据任务调度系统</div>
+                    </div>
+                    <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2025年04月 - 至今</u></div>
+                </div>
+                <div style={{fontWeight: "", fontSize: 16}}><b>数据分析平台：数据任务调度负责人</b></div>
+                <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0, paddingRight: 0}}>
+                    <div style={{
+                        paddingLeft: 0,
+                        fontSize: 16,
+                        marginTop: 5,
+                        marginBottom: 5,
+                        lineHeight: "21px"
+                    }}><Block/><b>主导调度系统架构升级【开发语言Java】</b>
+                        <div style={{margin:0, paddingLeft:20}}>
+                            <div><Block1/><b>业务兼容与迁移：</b>设计DSL协议化SQL动态渲染机制，支持按日期拆分任务实例、自定义日历、手动补数等复杂业务场景；实现从内部调度系统到独立调度平台的灰度平滑迁移，确保方案级任务双向迁移的幂等性和最终一致性</div>
+                            <div><Block1/><b>多引擎适配：</b>抽象调度执行层，适配Hologres、Doris、StarRocks等多种物理引擎的事务机制差异（如Hologres需显式BEGIN/COMMIT）</div>
+                            <div><Block1/><b>跨任务数据依赖（Cube场景）：</b>利用业务时间、工作流实例ID等贯穿字段动态生成临时表名，实现上下游任务间临时表数据传递</div>
+                            <div><Block1/><b>状态同步与一致性：</b>基于Kafka实现实例状态同步与运行信息同步，保证系统间最终一致性；设计审计机制确保数据可追溯</div>
+                            <div><Block1/><b>性能优化：</b>针对PostgreSQL中超长TaskInstance表导致的IO和内存负载问题，拆分出TaskInstanceBasic表并冗余业务字段，减少多表联查，显著降低数据库压力</div>
+                        </div>
+                    </div>
+                </div>
                 <div style={{
                     display: "flex",
                     flexDirection: "row",
