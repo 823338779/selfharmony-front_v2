@@ -61,10 +61,6 @@ export default function Home() {
 
                 <Header content={'个人技能'}></Header>
                 <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0}}>
-                    {/*<li style={{paddingLeft: 0, fontSize: 13, marginTop: 5, marginBottom: 5}}>*/}
-                    {/*    <div style={{display: "inline", fontWeight: "bold"}}>编程语言</div>*/}
-                    {/*    ：熟悉JAVA/Kotlin、golang；充分理解常用数据结构和算法：树形结构等*/}
-                    {/*</li>*/}
                     <div style={{
                         paddingLeft: 0,
                         fontSize: 15,
@@ -72,10 +68,38 @@ export default function Home() {
                         marginBottom: 3,
                         lineHeight: "21px"
                     }}>
-                        <div style={{display: "inline", fontWeight: "bold"}}>
-                            工程技能：
-                        </div>
-                        熟练使用JAVA、GoLang编程语言；熟悉springboot相关框架，Mysql数据库；ElasticSearch、Redis缓存、Kafka消息队列等中间件；
+                        <div style={{display: "inline", fontWeight: "bold"}}>编程语言：</div>
+                        熟练使用Java、GoLang
+                    </div>
+                    {/*<div style={{*/}
+                    {/*    paddingLeft: 0,*/}
+                    {/*    fontSize: 15,*/}
+                    {/*    marginTop: 3,*/}
+                    {/*    marginBottom: 3,*/}
+                    {/*    lineHeight: "21px"*/}
+                    {/*}}>*/}
+                    {/*    <div style={{display: "inline", fontWeight: "bold"}}>后端框架：</div>*/}
+                    {/*    Spring Boot、Spark*/}
+                    {/*</div>*/}
+                    <div style={{
+                        paddingLeft: 0,
+                        fontSize: 15,
+                        marginTop: 3,
+                        marginBottom: 3,
+                        lineHeight: "21px"
+                    }}>
+                        <div style={{display: "inline", fontWeight: "bold"}}>数据存储：</div>
+                        MySQL、PostgreSQL、Redis、Doris、StarRocks等OLAP引擎
+                    </div>
+                    <div style={{
+                        paddingLeft: 0,
+                        fontSize: 15,
+                        marginTop: 3,
+                        marginBottom: 3,
+                        lineHeight: "21px"
+                    }}>
+                        <div style={{display: "inline", fontWeight: "bold"}}>中间件：</div>
+                        Redis、Kafka、Spark
                     </div>
                 </div>
 
