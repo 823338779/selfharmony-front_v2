@@ -114,6 +114,7 @@ export default function Home() {
                     marginBottom: 3
                 }}>
                     <div style={{display: "flex", flexDirection: "row", alignContent: "center", alignItems: "center"}}>
+                        <img style={{height: 35, paddingRight: 15}} src={"./aloudata.png"} alt={""}/>
                         <div style={{fontWeight: "bold", fontSize: 18}}>浙江大应科技-数据分析平台-数据任务调度系统</div>
                     </div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2025年04月 - 至今</u></div>
@@ -178,7 +179,7 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><Block/><b>监控存储引擎优化【GoLang】：</b>针对时序数据库倒排索引的刷盘瓶颈，设计内存缓存层实现<b>批量刷盘策略</b>，引入LSM-Tree思想优化写入路径，<b>磁盘IO降低约40%</b>
+                    }}><Block/><b>InfluxDB引擎优化【GoLang】：</b>针对时序数据库倒排索引的刷盘瓶颈，设计内存缓存层实现<b>批量刷盘策略</b>，引入LSM-Tree思想优化写入路径，<b>磁盘IO降低约40%</b>
                     </div>
 
                     <div style={{
