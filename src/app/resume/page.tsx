@@ -123,6 +123,19 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                    <div style={{
+                        paddingLeft: 0,
+                        fontSize: 16,
+                        marginTop: 5,
+                        marginBottom: 5,
+                        lineHeight: "21px"
+                    }}><Block/><b>【性能优化】数据查询维度映射方案</b>
+                        <div style={{margin:0, paddingLeft:20}}>
+                            <div><Block1/><b>背景：</b>原方案在Java内存中对查询结果进行维度值替换，大数据量下造成<b>内存与CPU负载压力</b></div>
+                            <div><Block1/><b>方案：</b>设计独立维度映射表，通过<b>SQL JOIN</b>在查询层面直接完成原始值到结果值的映射转换；支持用户自定义映射规则，实现<b>配置化数据转换</b></div>
+                            <div><Block1/><b>收益：</b>将数据转换逻辑下沉至数据库层，<b>消除服务端内存与CPU开销</b>，提升查询性能与系统稳定性</div>
+                        </div>
+                    </div>
                 </div>
                 <div style={{height:20}}></div>
 
