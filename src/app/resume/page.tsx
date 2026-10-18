@@ -101,8 +101,26 @@ export default function Home() {
                     </div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2025年04月 - 至今</u></div>
                 </div>
-                <div style={{fontWeight: "", fontSize: 16}}><b>数据任务调度开发负责人【Java / Python】</b></div>
+                <div style={{fontWeight: "", fontSize: 16}}><b>JAVA开发/系统架构设计</b></div>
                 <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0, paddingRight: 0}}>
+                    <div style={{
+                        paddingLeft: 0,
+                        fontSize: 16,
+                        marginTop: 5,
+                        marginBottom: 5,
+                        lineHeight: "21px"
+                    }}><Block/><b>大数据Agent方案</b>
+                        <div style={{margin:0, paddingLeft:20}}>
+                            <div><Block1/>设计以<b>Git为Agent侧与平台引擎侧隔离边界</b>的方案，通过符合dbt协议的YAML文件维护业务模型定义，作为平台指标、维度、数据集的定义来源；后续数据查询、分析操作均以这些定义为基准，实现<b>yml文件即语义</b></div>
+                            <div><Block1/>在<b>理解dbt、MetricFlow开源代码实现的基础上</b>，设计并进行以下三项<b>二次开发</b>：
+                                <div style={{margin:0, paddingLeft:20}}>
+                                    <div>1. 去除运行时本地文件依赖，改为从业务数据库读取模型内容，并封装为<b>无状态Python服务</b></div>
+                                    <div>2. 扩展<b>维度值映射</b>业务定义，在查询SQL中直接<b>关联维度值映射表</b>，将数值编码等原始维度值转换为对应的实际业务内容</div>
+                                    <div>3. 支持更完备的多通路设计，支持不同原表上的指标<b>各自指定维度关联路径</b>进行查询</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div style={{
                         paddingLeft: 0,
                         fontSize: 16,
@@ -127,24 +145,6 @@ export default function Home() {
                             <div><Block1/>基于指标、维度、筛选配置生成<b>SQL模板与OLAP物化表</b>；在调度实例生成阶段计算动态值，执行阶段渲染补数SQL、替换占位符，通过<b>INSERT OVERWRITE</b>写入物化表</div>
                             <div><Block1/>提供<b>Spark数据构建能力</b>，支持大体量数据的物化构建</div>
                             <div><Block1/>支持数据物化场景的<b>业务流量回放</b>，重放客户已有的物化任务，在版本发布前对比<b>新旧版本物化补数结果的一致性</b></div>
-                        </div>
-                    </div>
-                    <div style={{
-                        paddingLeft: 0,
-                        fontSize: 16,
-                        marginTop: 5,
-                        marginBottom: 5,
-                        lineHeight: "21px"
-                    }}><Block/><b>大数据Agent方案与分析引擎扩展</b>
-                        <div style={{margin:0, paddingLeft:20}}>
-                            <div><Block1/>设计以<b>Git为Agent侧与平台引擎侧隔离边界</b>的方案，通过符合dbt协议的YAML文件维护业务模型定义，作为平台指标、维度、数据集的定义来源；后续数据查询、分析操作均以这些定义为基准，实现<b>yml文件即语义</b></div>
-                            <div><Block1/>在<b>理解dbt、MetricFlow开源代码实现的基础上</b>，设计并进行以下三项<b>二次开发</b>：
-                                <div style={{margin:0, paddingLeft:20}}>
-                                    <div>1. 去除运行时本地文件依赖，改为从业务数据库读取模型内容，并封装为<b>无状态Python服务</b></div>
-                                    <div>2. 扩展<b>维度值映射</b>业务定义，在查询SQL中直接<b>关联维度值映射表</b>，将数值编码等原始维度值转换为对应的实际业务内容</div>
-                                    <div>3. 支持更完备的多通路设计，支持不同原表上的指标<b>各自指定维度关联路径</b>进行查询</div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div style={{
