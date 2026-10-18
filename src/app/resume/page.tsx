@@ -97,11 +97,11 @@ export default function Home() {
                 }}>
                     <div style={{display: "flex", flexDirection: "row", alignContent: "center", alignItems: "center"}}>
                         <img style={{height: 35, paddingRight: 15}} src={"./aloudata.png"} alt={""}/>
-                        <div style={{fontWeight: "bold", fontSize: 18}}>浙江大应科技-数据分析平台-数据任务调度系统</div>
+                        <div style={{fontWeight: "bold", fontSize: 18}}>浙江大应科技-数据分析平台</div>
                     </div>
                     <div style={{fontSize: 13, verticalAlign: "middle"}}><u>2025年04月 - 至今</u></div>
                 </div>
-                <div style={{fontWeight: "", fontSize: 16}}><b>数据分析平台-数据任务调度开发负责人【Java技术栈】</b></div>
+                <div style={{fontWeight: "", fontSize: 16}}><b>数据任务调度开发负责人【Java / Python】</b></div>
                 <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0, paddingRight: 0}}>
                     <div style={{
                         paddingLeft: 0,
@@ -109,17 +109,40 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><Block/><b>【0到1主导】调度系统架构升级</b>
+                    }}><Block/><b>调度系统架构升级</b>
                         <div style={{margin:0, paddingLeft:20}}>
-                            <div><Block1/><b>背景：</b>原调度模块内嵌于业务系统（基于Quartz近实时触发），存在历史遗留缺陷，运行时频繁生成长字符串导致<b>FullGC风险</b>；结合产品层改造，对调度业务改为T+1的方式执行。<b>全程主导需求分析→架构选型→方案落地→上线发布</b></div>
-                            <div><Block1/><b>架构设计：</b>将调度模式从"近实时触发"改为<b>"T+1预生成"</b>，每日22点提前生成并固化次日任务实例；业务系统负责任务注册与元数据同步，调度系统独立执行，通过<b>Kafka</b>异步同步实例状态</div>
-                            <div><Block1/><b>难点与解决方案：</b>
+                            <div><Block1/><b>主导需求分析、架构选型至上线发布</b>，将内嵌于业务系统的Quartz调度模块拆分为独立服务；结合产品改造，采用<b>T+1任务实例预生成</b>，通过Kafka异步同步执行状态</div>
+                            <div><Block1/>设计<b>任务定义DSL与实例化插件</b>，支持日期范围拆分、自定义日历和手动补数，解耦业务任务定义与调度执行</div>
+                            <div><Block1/>设计基于<b>最终一致性</b>的任务注册及任务信息、执行记录对账机制；支持新旧系统并行、灰度切换与容灾回滚，保障迁移与跨系统数据同步</div>
+                        </div>
+                    </div>
+                    <div style={{
+                        paddingLeft: 0,
+                        fontSize: 16,
+                        marginTop: 5,
+                        marginBottom: 5,
+                        lineHeight: "21px"
+                    }}><Block/><b>数据物化与Spark构建</b>
+                        <div style={{margin:0, paddingLeft:20}}>
+                            <div><Block1/>基于指标、维度、筛选配置生成<b>SQL模板与OLAP物化表</b>；在调度实例生成阶段计算动态值，执行阶段渲染补数SQL、替换占位符，通过<b>INSERT OVERWRITE</b>写入物化表</div>
+                            <div><Block1/>提供<b>Spark数据构建能力</b>，支持大体量数据的物化构建</div>
+                            <div><Block1/>支持数据物化场景的<b>业务流量回放</b>，重放客户已有的物化任务，在版本发布前对比<b>新旧版本物化补数结果的一致性</b></div>
+                        </div>
+                    </div>
+                    <div style={{
+                        paddingLeft: 0,
+                        fontSize: 16,
+                        marginTop: 5,
+                        marginBottom: 5,
+                        lineHeight: "21px"
+                    }}><Block/><b>大数据Agent方案与分析引擎扩展</b>
+                        <div style={{margin:0, paddingLeft:20}}>
+                            <div><Block1/>设计以<b>Git为Agent侧与平台引擎侧隔离边界</b>的方案，通过符合dbt协议的YAML文件维护业务模型定义，作为平台指标、维度、数据集的定义来源；后续数据查询、分析操作均以这些定义为基准，实现<b>yml文件即语义</b></div>
+                            <div><Block1/>在<b>理解dbt、MetricFlow开源代码实现的基础上</b>，设计并进行以下三项<b>二次开发</b>：
                                 <div style={{margin:0, paddingLeft:20}}>
-                                    <div><Block1/><b>DSL协议化设计：</b>针对独立调度服务无法承载大量业务定制化逻辑的问题，设计任务定义DSL协议，支持日期范围拆分、自定义日历、手动补数等动态场景；通过实例化插件将DSL渲染为真实执行实例数据，实现<b>协议与执行解耦</b></div>
-                                    <div><Block1/><b>灰度平滑迁移：</b>实现新老双调度系统并行运行，支持<b>一键切换与容灾回滚</b>，确保迁移过程用户无感知</div>
-                                    <div><Block1/><b>分布式一致性保障：</b>在无分布式事务支持下，设计基于<b>最终一致性</b>的任务注册机制。并构建任务信息、执行记录的对账，确保业务系统与调度服务间数据可靠同步</div>
-                                    <div><Block1/><b>数据库性能优化：</b>针对任务实例表中大JSON字段导致的扫盘与内存压力，拆分出独立Basic表存储高频查询字段，<b>显著降低IO与CPU负载</b></div>
-                                    <div><Block1/><b>跨任务节点表依赖：</b>针对工作流中多任务节点间的数据传递场景（中间结果暂存临时表、汇总节点读取后删除），设计临时表<b>加盐命名策略</b>，融合工作流参数、调度日期、实例ID生成可依赖但是不重复的"盐"，实现跨节点数据可靠关联</div>
+                                    <div>1. 去除运行时本地文件依赖，改为从业务数据库读取模型内容，并封装为<b>无状态Python服务</b></div>
+                                    <div>2. 扩展<b>维度值映射</b>业务定义，在查询SQL中直接<b>关联维度值映射表</b>，将数值编码等原始维度值转换为对应的实际业务内容</div>
+                                    <div>3. 支持更完备的多通路设计，支持不同原表上的指标<b>各自指定维度关联路径</b>进行查询</div>
                                 </div>
                             </div>
                         </div>
@@ -130,11 +153,21 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><Block/><b>【性能优化】数据查询维度映射方案</b>
+                    }}><Block/><b>通用批量异步任务中台</b>
                         <div style={{margin:0, paddingLeft:20}}>
-                            <div><Block1/><b>背景：</b>原方案在Java内存中对查询结果进行维度值替换，大数据量下造成<b>内存与CPU负载压力</b></div>
-                            <div><Block1/><b>方案：</b>设计独立维度映射表，通过<b>SQL JOIN</b>在查询层面直接完成原始值到结果值的映射转换；支持用户自定义映射规则，实现<b>配置化数据转换</b></div>
-                            <div><Block1/><b>收益：</b>将数据转换逻辑下沉至数据库层，<b>消除服务端内存与CPU开销</b>，提升查询性能与系统稳定性</div>
+                            <div><Block1/>设计由<b>集群实例定期从数据库获取任务并执行</b>的异步任务中台；抽象统一的任务接入与执行能力，由业务遵循中台约定接入，减少业务专用适配逻辑</div>
+                        </div>
+                    </div>
+                    <div style={{
+                        paddingLeft: 0,
+                        fontSize: 16,
+                        marginTop: 5,
+                        marginBottom: 5,
+                        lineHeight: "21px"
+                    }}><Block/><b>查询与存储性能优化</b>
+                        <div style={{margin:0, paddingLeft:20}}>
+                            <div><Block1/>将维度值替换从Java内存处理下沉为<b>维度映射表与SQL JOIN</b>，支持自定义映射规则，减少应用侧CPU与内存开销</div>
+                            <div><Block1/>针对任务实例大JSON字段带来的读取压力，将高频查询字段拆至独立Basic表，降低查询IO与CPU负载</div>
                         </div>
                     </div>
                 </div>
