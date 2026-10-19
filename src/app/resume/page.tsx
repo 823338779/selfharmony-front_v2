@@ -112,7 +112,7 @@ export default function Home() {
                     }}><Block/><b>大数据Agent方案</b>
                         <div style={{margin:0, paddingLeft:20}}>
                             <div><Block1/>设计以<b>Git为Agent侧与平台引擎侧隔离边界</b>的方案，通过符合dbt协议的YAML文件维护业务模型定义，作为平台指标、维度、数据集的定义来源；后续数据查询、分析操作均以这些定义为基准，实现<b>yml文件即语义</b></div>
-                            <div><Block1/>在<b>理解dbt、MetricFlow开源代码实现的基础上</b>，设计并进行以下三项<b>二次开发</b>：
+                            <div><Block1/>在<b>理解dbt、MetricFlow开源代码实现的基础上</b>，围绕<b>数据建模、SQL生成等能力建设</b>开展<b>二次开发</b>，具体包括：
                                 <div style={{margin:0, paddingLeft:20}}>
                                     <div>1. 去除运行时本地文件依赖，改为从业务数据库读取模型内容，并封装为<b>无状态Python服务</b></div>
                                     <div>2. 扩展<b>维度值映射</b>业务定义，在查询SQL中直接<b>关联维度值映射表</b>，将数值编码等原始维度值转换为对应的实际业务内容</div>
