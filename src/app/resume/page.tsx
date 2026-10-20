@@ -79,7 +79,17 @@ export default function Home() {
                         lineHeight: "21px"
                     }}>
                         <div style={{display: "inline", fontWeight: "bold"}}>开发组件：</div>
-                        Redis、Kafka、Spark；MySQL、PostgreSQL、Doris、StarRocks等OLAP引擎
+                        Redis、Kafka；MySQL、PostgreSQL、Doris、StarRocks等OLAP引擎
+                    </div>
+                    <div style={{
+                        paddingLeft: 0,
+                        fontSize: 15,
+                        marginTop: 6,
+                        marginBottom: 6,
+                        lineHeight: "21px"
+                    }}>
+                        <div style={{display: "inline", fontWeight: "bold"}}>大数据技术：</div>
+                        具有Flink、Spark、Hive使用经验
                     </div>
                 </div>
 
