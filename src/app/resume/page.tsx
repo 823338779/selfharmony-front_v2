@@ -174,10 +174,10 @@ export default function Home() {
                         marginTop: 5,
                         marginBottom: 5,
                         lineHeight: "21px"
-                    }}><Block/><b>查询与存储性能优化</b>
+                    }}><Block/><b>性能优化</b>
                         <div style={{margin:0, paddingLeft:20}}>
-                            <div><Block1/>将维度值替换从Java内存处理下沉为<b>维度映射表与SQL JOIN</b>，支持自定义映射规则，减少应用侧CPU与内存开销</div>
-                            <div><Block1/>针对任务实例大JSON字段带来的读取压力，将高频查询字段拆至独立Basic表，降低查询IO与CPU负载</div>
+                            <div><Block1/><b>PostgreSQL缓存与大表优化：</b>针对任务实例表中大JSON字段带来的读取压力，将高频查询字段拆至独立Basic表，降低查询IO与CPU负载</div>
+                            <div><Block1/><b>维度映射查询优化：</b>将维度值替换从Java内存处理下沉为<b>维度映射表与SQL JOIN</b>，支持自定义映射规则，减少应用侧CPU与内存开销</div>
                         </div>
                     </div>
                 </div>
