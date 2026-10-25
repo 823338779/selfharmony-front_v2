@@ -59,6 +59,17 @@ export default function Home() {
                 {/*</ul>*/}
 
 
+                <Header content={'个人优势'}></Header>
+                <div style={{
+                    paddingLeft: 0,
+                    fontSize: 15,
+                    marginTop: 6,
+                    marginBottom: 6,
+                    lineHeight: "21px"
+                }}>
+                    具备多种业务场景下的问题分析与解决经验，能够结合业务需求进行<b>系统架构设计</b>，提供<b>业务系统层面的整体解决方案</b>。
+                </div>
+
                 <Header content={'个人技能'}></Header>
                 <div style={{marginTop: 0, marginBottom: 0, paddingLeft: 0}}>
                     <div style={{
